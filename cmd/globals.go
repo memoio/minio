@@ -26,11 +26,11 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/memoio/console/restapi"
 	"github.com/memoio/minio/internal/bucket/bandwidth"
 	"github.com/memoio/minio/internal/config"
 	"github.com/memoio/minio/internal/handlers"
 	"github.com/memoio/minio/internal/kms"
-	"github.com/minio/console/restapi"
 	"github.com/minio/minio-go/v7/pkg/set"
 	"github.com/rs/dnscache"
 

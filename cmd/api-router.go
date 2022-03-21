@@ -24,9 +24,9 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/klauspost/compress/gzhttp"
+	"github.com/memoio/console/restapi"
 	xhttp "github.com/memoio/minio/internal/http"
 	"github.com/memoio/minio/internal/logger"
-	"github.com/minio/console/restapi"
 	"github.com/minio/pkg/wildcard"
 	"github.com/rs/cors"
 )
