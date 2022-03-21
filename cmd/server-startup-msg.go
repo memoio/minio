@@ -153,7 +153,7 @@ func printServerCommonMsg(apiEndpoints []string) {
 
 // Prints startup message for Object API acces, prints link to our SDK documentation.
 func printObjectAPIMsg() {
-	logger.Info(color.Blue("\nDocumentation: ") + "https://docs.min.io")
+	logger.Info(color.Blue("\nDocumentation: ") + "https://www.memolabs.org/#/")
 }
 
 // Prints bucket notification configurations.
