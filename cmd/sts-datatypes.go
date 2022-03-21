@@ -20,7 +20,7 @@ package cmd
 import (
 	"encoding/xml"
 
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 )
 
 // AssumedRoleUser - The identifiers for the temporary security credentials that

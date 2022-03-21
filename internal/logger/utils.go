@@ -22,7 +22,7 @@ import (
 	"regexp"
 	"runtime"
 
-	"github.com/memoio/miniointernal/color"
+	"github.com/memoio/minio/internal/color"
 )
 
 var ansiRE = regexp.MustCompile("(\x1b[^m]*m)")

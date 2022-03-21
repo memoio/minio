@@ -24,8 +24,8 @@ import (
 
 	humanize "github.com/dustin/go-humanize"
 	"github.com/gorilla/mux"
-	"github.com/memoio/miniointernal/bucket/versioning"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/bucket/versioning"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 )
 

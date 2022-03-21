@@ -21,11 +21,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 
-	bucketsse "github.com/memoio/miniointernal/bucket/encryption"
-	"github.com/memoio/miniointernal/bucket/lifecycle"
-	"github.com/memoio/miniointernal/bucket/versioning"
+	bucketsse "github.com/memoio/minio/internal/bucket/encryption"
+	"github.com/memoio/minio/internal/bucket/lifecycle"
+	"github.com/memoio/minio/internal/bucket/versioning"
 	"github.com/minio/minio-go/v7/pkg/tags"
 	"github.com/minio/pkg/bucket/policy"
 

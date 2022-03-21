@@ -31,7 +31,7 @@ import (
 	"time"
 
 	"github.com/go-sql-driver/mysql"
-	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/minio/internal/event"
 	xnet "github.com/minio/pkg/net"
 )
 

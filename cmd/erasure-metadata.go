@@ -27,10 +27,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/bucket/replication"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/sync/errgroup"
+	"github.com/memoio/minio/internal/bucket/replication"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/sync/errgroup"
 )
 
 // Object was stored with additional erasure codes due to degraded system at upload time

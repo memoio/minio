@@ -22,7 +22,7 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	"github.com/memoio/miniointernal/bucket/lifecycle"
+	"github.com/memoio/minio/internal/bucket/lifecycle"
 )
 
 const freeVersion = "free-version"

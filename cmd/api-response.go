@@ -29,10 +29,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/crypto"
-	"github.com/memoio/miniointernal/handlers"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/crypto"
+	"github.com/memoio/minio/internal/handlers"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger"
 )
 
 const (

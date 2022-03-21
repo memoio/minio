@@ -27,7 +27,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/memoio/miniointernal/dsync"
+	"github.com/memoio/minio/internal/dsync"
 )
 
 func BenchmarkLockArgs(b *testing.B) {

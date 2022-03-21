@@ -25,7 +25,7 @@ import (
 	"hash"
 	"io"
 
-	"github.com/memoio/miniointernal/etag"
+	"github.com/memoio/minio/internal/etag"
 )
 
 // A Reader wraps an io.Reader and computes the MD5 checksum

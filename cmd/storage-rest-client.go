@@ -33,9 +33,9 @@ import (
 	"sync"
 	"time"
 
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/rest"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/rest"
 	xnet "github.com/minio/pkg/net"
 	xbufio "github.com/philhofer/fwd"
 	"github.com/tinylib/msgp/msgp"

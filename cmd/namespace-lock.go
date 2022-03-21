@@ -28,9 +28,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/memoio/miniointernal/dsync"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/lsync"
+	"github.com/memoio/minio/internal/dsync"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/lsync"
 )
 
 // local lock servers

@@ -26,8 +26,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/memoio/miniointernal/kms"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/kms"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/kes"
 	"github.com/minio/madmin-go"
 	"github.com/minio/pkg/bucket/policy"

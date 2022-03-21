@@ -24,9 +24,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/memoio/miniointernal/fips"
-	"github.com/memoio/miniointernal/ioutil"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/fips"
+	"github.com/memoio/minio/internal/ioutil"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/sio"
 )
 

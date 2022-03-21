@@ -29,7 +29,7 @@ import (
 	minio "github.com/memoio/miniocmd"
 	"github.com/minio/minio-go/v7/pkg/encrypt"
 
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 )
 
 const (

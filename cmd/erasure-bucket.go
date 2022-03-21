@@ -21,8 +21,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/sync/errgroup"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/sync/errgroup"
 	"github.com/minio/minio-go/v7/pkg/s3utils"
 )
 

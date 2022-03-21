@@ -25,9 +25,9 @@ import (
 	"path"
 	"strings"
 
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/kms"
-	"github.com/memoio/miniointernal/logger"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/kms"
+	"github.com/memoio/minio/internal/logger"
 )
 
 type sses3 struct{}

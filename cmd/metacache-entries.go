@@ -24,7 +24,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/console"
 )
 

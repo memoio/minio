@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 	"github.com/minio/pkg/env"
 	xnet "github.com/minio/pkg/net"
 	clientv3 "go.etcd.io/etcd/client/v3"

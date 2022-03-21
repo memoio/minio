@@ -28,8 +28,8 @@ import (
 	"github.com/minio/minio-go/v7/pkg/tags"
 	"github.com/minio/pkg/bucket/policy"
 
-	"github.com/memoio/miniointernal/bucket/replication"
-	xioutil "github.com/memoio/miniointernal/ioutil"
+	"github.com/memoio/minio/internal/bucket/replication"
+	xioutil "github.com/memoio/minio/internal/ioutil"
 )
 
 // CheckPreconditionFn returns true if precondition check failed.

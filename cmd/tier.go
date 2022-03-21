@@ -28,9 +28,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/memoio/miniointernal/crypto"
-	"github.com/memoio/miniointernal/hash"
-	"github.com/memoio/miniointernal/kms"
+	"github.com/memoio/minio/internal/crypto"
+	"github.com/memoio/minio/internal/hash"
+	"github.com/memoio/minio/internal/kms"
 	"github.com/minio/madmin-go"
 )
 

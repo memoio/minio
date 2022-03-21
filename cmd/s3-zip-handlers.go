@@ -29,9 +29,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/memoio/miniointernal/crypto"
-	xioutil "github.com/memoio/miniointernal/ioutil"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/crypto"
+	xioutil "github.com/memoio/minio/internal/ioutil"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 	xnet "github.com/minio/pkg/net"
 	"github.com/minio/zipindex"

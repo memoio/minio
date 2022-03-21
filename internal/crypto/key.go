@@ -28,8 +28,8 @@ import (
 	"io"
 	"path"
 
-	"github.com/memoio/miniointernal/fips"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/fips"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/sio"
 )
 

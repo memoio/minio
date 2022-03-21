@@ -23,7 +23,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/klauspost/compress/gzhttp"
 	"github.com/klauspost/compress/gzip"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 )
 

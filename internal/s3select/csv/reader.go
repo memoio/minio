@@ -26,7 +26,7 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"github.com/memoio/miniointernal/s3select/sql"
+	"github.com/memoio/minio/internal/s3select/sql"
 	csv "github.com/minio/csvparser"
 )
 

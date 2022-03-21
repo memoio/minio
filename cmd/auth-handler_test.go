@@ -28,7 +28,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 	iampolicy "github.com/minio/pkg/iam/policy"
 )
 

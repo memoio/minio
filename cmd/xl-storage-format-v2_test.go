@@ -32,9 +32,9 @@ import (
 	"github.com/google/uuid"
 	"github.com/klauspost/compress/zip"
 	"github.com/klauspost/compress/zstd"
-	"github.com/memoio/miniointernal/bucket/lifecycle"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/ioutil"
+	"github.com/memoio/minio/internal/bucket/lifecycle"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/ioutil"
 )
 
 func TestReadXLMetaNoData(t *testing.T) {

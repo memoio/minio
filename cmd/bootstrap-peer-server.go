@@ -29,9 +29,9 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/rest"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/rest"
 	"github.com/minio/minio-go/v7/pkg/set"
 	"github.com/minio/pkg/env"
 )

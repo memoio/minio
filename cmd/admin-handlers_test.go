@@ -31,7 +31,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 	"github.com/minio/madmin-go"
 )
 

@@ -23,7 +23,7 @@ import (
 	"strings"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 )
 
 const (

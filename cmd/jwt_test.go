@@ -24,8 +24,8 @@ import (
 	"time"
 
 	jwtgo "github.com/golang-jwt/jwt/v4"
-	"github.com/memoio/miniointernal/auth"
-	xjwt "github.com/memoio/miniointernal/jwt"
+	"github.com/memoio/minio/internal/auth"
+	xjwt "github.com/memoio/minio/internal/jwt"
 )
 
 func testAuthenticate(authType string, t *testing.T) {

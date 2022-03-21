@@ -28,8 +28,8 @@ import (
 
 	"github.com/dustin/go-humanize"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/memoio/miniointernal/auth"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/auth"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 	"github.com/minio/minio-go/v7/pkg/set"
 	iampolicy "github.com/minio/pkg/iam/policy"

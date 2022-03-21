@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/disk"
+	"github.com/memoio/minio/internal/disk"
 	"github.com/minio/madmin-go"
 )
 

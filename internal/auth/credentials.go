@@ -29,7 +29,7 @@ import (
 	"time"
 
 	jwtgo "github.com/golang-jwt/jwt/v4"
-	"github.com/memoio/miniointernal/jwt"
+	"github.com/memoio/minio/internal/jwt"
 )
 
 const (

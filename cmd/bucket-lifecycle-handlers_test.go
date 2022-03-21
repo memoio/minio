@@ -24,7 +24,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 )
 
 // Test S3 Bucket lifecycle APIs with wrong credentials

@@ -25,9 +25,9 @@ import (
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
+	"github.com/memoio/minio/internal/hash"
+	"github.com/memoio/minio/internal/logger"
 	minio "github.com/memoio/miniocmd"
-	"github.com/memoio/miniointernal/hash"
-	"github.com/memoio/miniointernal/logger"
 )
 
 var (

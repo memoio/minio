@@ -27,7 +27,7 @@ import (
 	"time"
 
 	ldap "github.com/go-ldap/ldap/v3"
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 	"github.com/minio/minio-go/v7/pkg/set"
 )
 

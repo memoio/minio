@@ -20,7 +20,7 @@ package subnet
 import (
 	"net/url"
 
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 	"github.com/minio/pkg/env"
 )
 

@@ -21,7 +21,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 )
 
 type tierMemJournal struct {

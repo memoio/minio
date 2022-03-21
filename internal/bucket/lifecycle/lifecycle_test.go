@@ -29,7 +29,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	xhttp "github.com/memoio/miniointernal/http"
+	xhttp "github.com/memoio/minio/internal/http"
 )
 
 func TestParseAndValidateLifecycleConfig(t *testing.T) {

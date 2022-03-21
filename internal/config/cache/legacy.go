@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 )
 
 const (

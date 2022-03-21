@@ -29,7 +29,7 @@ import (
 	"time"
 
 	"github.com/gomodule/redigo/redis"
-	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/minio/internal/event"
 	xnet "github.com/minio/pkg/net"
 )
 

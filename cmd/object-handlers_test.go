@@ -38,9 +38,9 @@ import (
 	"testing"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/memoio/miniointernal/auth"
-	xhttp "github.com/memoio/miniointernal/http"
-	ioutilx "github.com/memoio/miniointernal/ioutil"
+	"github.com/memoio/minio/internal/auth"
+	xhttp "github.com/memoio/minio/internal/http"
+	ioutilx "github.com/memoio/minio/internal/ioutil"
 )
 
 // Type to capture different modifications to API request to simulate failure cases.

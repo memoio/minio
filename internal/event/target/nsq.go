@@ -28,7 +28,7 @@ import (
 
 	"github.com/nsqio/go-nsq"
 
-	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/minio/internal/event"
 	xnet "github.com/minio/pkg/net"
 )
 

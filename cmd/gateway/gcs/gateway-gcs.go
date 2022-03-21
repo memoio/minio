@@ -36,8 +36,8 @@ import (
 
 	"cloud.google.com/go/storage"
 	humanize "github.com/dustin/go-humanize"
+	"github.com/memoio/minio/internal/logger"
 	minio "github.com/memoio/miniocmd"
-	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/cli"
 	"github.com/minio/madmin-go"
 	miniogopolicy "github.com/minio/minio-go/v7/pkg/policy"

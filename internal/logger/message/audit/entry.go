@@ -22,8 +22,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/handlers"
-	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/minio/internal/handlers"
+	xhttp "github.com/memoio/minio/internal/http"
 )
 
 // Version - represents the current version of audit log structure.

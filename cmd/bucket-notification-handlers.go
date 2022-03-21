@@ -24,8 +24,8 @@ import (
 	"reflect"
 
 	"github.com/gorilla/mux"
-	"github.com/memoio/miniointernal/event"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/event"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 )
 

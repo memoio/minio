@@ -26,8 +26,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/sync/errgroup"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/sync/errgroup"
 	"github.com/minio/madmin-go"
 )
 

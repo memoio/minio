@@ -28,7 +28,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/minio/internal/event"
 	xnet "github.com/minio/pkg/net"
 
 	sarama "github.com/Shopify/sarama"

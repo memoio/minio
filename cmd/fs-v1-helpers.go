@@ -26,9 +26,9 @@ import (
 	"strings"
 	"time"
 
-	xioutil "github.com/memoio/miniointernal/ioutil"
-	"github.com/memoio/miniointernal/lock"
-	"github.com/memoio/miniointernal/logger"
+	xioutil "github.com/memoio/minio/internal/ioutil"
+	"github.com/memoio/minio/internal/lock"
+	"github.com/memoio/minio/internal/logger"
 )
 
 // Removes only the file at given path does not remove

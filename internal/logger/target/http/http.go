@@ -29,8 +29,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger/target/types"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger/target/types"
 )
 
 // Timeout for the webhook http call

@@ -21,7 +21,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 	"github.com/minio/madmin-go"
 )
 

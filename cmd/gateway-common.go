@@ -24,10 +24,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/hash"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/hash"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/env"
 	xnet "github.com/minio/pkg/net"
 

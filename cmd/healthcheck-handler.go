@@ -23,7 +23,7 @@ import (
 	"net/http"
 	"strconv"
 
-	xhttp "github.com/memoio/miniointernal/http"
+	xhttp "github.com/memoio/minio/internal/http"
 )
 
 const unavailable = "offline"

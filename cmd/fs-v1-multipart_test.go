@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/memoio/miniointernal/config/api"
+	"github.com/memoio/minio/internal/config/api"
 )
 
 // Tests cleanup multipart uploads for filesystem backend.

@@ -27,9 +27,9 @@ import (
 	"sort"
 
 	"github.com/gorilla/mux"
-	"github.com/memoio/miniointernal/auth"
-	"github.com/memoio/miniointernal/config/dns"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/auth"
+	"github.com/memoio/minio/internal/config/dns"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 	iampolicy "github.com/minio/pkg/iam/policy"
 )

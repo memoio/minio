@@ -17,7 +17,7 @@
 
 package cache
 
-import "github.com/memoio/miniointernal/config"
+import "github.com/memoio/minio/internal/config"
 
 // Help template for caching feature.
 var (

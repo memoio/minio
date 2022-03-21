@@ -21,7 +21,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 )
 
 // errUnexpected - unexpected error, requires manual intervention.

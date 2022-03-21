@@ -24,8 +24,8 @@ import (
 
 	"github.com/gorilla/mux"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/memoio/miniointernal/config/storageclass"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/config/storageclass"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 	iampolicy "github.com/minio/pkg/iam/policy"
 )

@@ -22,8 +22,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/event/target"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/event/target"
 )
 
 // SetNotifyKafka - helper for config migration from older config.

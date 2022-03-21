@@ -32,9 +32,9 @@ import (
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/memoio/miniointernal/color"
-	"github.com/memoio/miniointernal/hash"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/color"
+	"github.com/memoio/minio/internal/hash"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/console"
 )
 

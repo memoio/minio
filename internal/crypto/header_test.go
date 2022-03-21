@@ -23,7 +23,7 @@ import (
 	"sort"
 	"testing"
 
-	xhttp "github.com/memoio/miniointernal/http"
+	xhttp "github.com/memoio/minio/internal/http"
 )
 
 func TestIsRequested(t *testing.T) {

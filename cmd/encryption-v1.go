@@ -33,11 +33,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/memoio/miniointernal/crypto"
-	"github.com/memoio/miniointernal/fips"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/kms"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/crypto"
+	"github.com/memoio/minio/internal/fips"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/kms"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/kes"
 	"github.com/minio/sio"
 )

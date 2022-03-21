@@ -28,7 +28,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/minio/madmin-go"
 
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 	iampolicy "github.com/minio/pkg/iam/policy"
 )

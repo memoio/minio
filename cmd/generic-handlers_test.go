@@ -24,8 +24,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/memoio/miniointernal/crypto"
-	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/minio/internal/crypto"
+	xhttp "github.com/memoio/minio/internal/http"
 )
 
 // Tests request guess function for net/rpc requests.

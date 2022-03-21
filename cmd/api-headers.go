@@ -28,8 +28,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/crypto"
-	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/minio/internal/crypto"
+	xhttp "github.com/memoio/minio/internal/http"
 )
 
 // Returns a hexadecimal representation of time at the

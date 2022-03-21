@@ -32,7 +32,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/minio/internal/auth"
 	"github.com/minio/madmin-go"
 	minio "github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"

@@ -22,11 +22,11 @@ import (
 	"context"
 	"sync"
 
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/logger/message/log"
-	"github.com/memoio/miniointernal/logger/target/console"
-	"github.com/memoio/miniointernal/logger/target/types"
-	"github.com/memoio/miniointernal/pubsub"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/logger/message/log"
+	"github.com/memoio/minio/internal/logger/target/console"
+	"github.com/memoio/minio/internal/logger/target/types"
+	"github.com/memoio/minio/internal/pubsub"
 	xnet "github.com/minio/pkg/net"
 )
 

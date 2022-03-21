@@ -28,14 +28,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	objectlock "github.com/memoio/miniointernal/bucket/object/lock"
-	"github.com/memoio/miniointernal/color"
-	"github.com/memoio/miniointernal/config/cache"
-	"github.com/memoio/miniointernal/disk"
-	"github.com/memoio/miniointernal/hash"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/sync/errgroup"
+	objectlock "github.com/memoio/minio/internal/bucket/object/lock"
+	"github.com/memoio/minio/internal/color"
+	"github.com/memoio/minio/internal/config/cache"
+	"github.com/memoio/minio/internal/disk"
+	"github.com/memoio/minio/internal/hash"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/sync/errgroup"
 	"github.com/minio/pkg/wildcard"
 )
 

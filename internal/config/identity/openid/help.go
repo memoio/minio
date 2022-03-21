@@ -17,7 +17,7 @@
 
 package openid
 
-import "github.com/memoio/miniointernal/config"
+import "github.com/memoio/minio/internal/config"
 
 // Help template for OpenID identity feature.
 var (

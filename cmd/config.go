@@ -28,8 +28,8 @@ import (
 	"unicode/utf8"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/kms"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/kms"
 	"github.com/minio/madmin-go"
 )
 

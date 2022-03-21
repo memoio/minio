@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/memoio/miniointernal/color"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/color"
+	"github.com/memoio/minio/internal/logger"
 )
 
 // Prints the formatted startup message.

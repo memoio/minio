@@ -23,7 +23,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 )
 
 // Test if config v1 is purged

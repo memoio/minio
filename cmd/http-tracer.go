@@ -29,8 +29,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/handlers"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/handlers"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 )
 

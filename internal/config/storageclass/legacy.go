@@ -18,7 +18,7 @@
 package storageclass
 
 import (
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 )
 
 // SetStorageClass - One time migration code needed, for migrating from older config to new for StorageClass.

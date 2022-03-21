@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/memoio/miniointernal/hash"
+	"github.com/memoio/minio/internal/hash"
 	miniogo "github.com/minio/minio-go/v7"
 
 	minio "github.com/memoio/miniocmd"

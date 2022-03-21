@@ -27,10 +27,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/memoio/miniointernal/bpool"
-	"github.com/memoio/miniointernal/dsync"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/sync/errgroup"
+	"github.com/memoio/minio/internal/bpool"
+	"github.com/memoio/minio/internal/dsync"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/sync/errgroup"
 	"github.com/minio/madmin-go"
 	"github.com/minio/pkg/console"
 )

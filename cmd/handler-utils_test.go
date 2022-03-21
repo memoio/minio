@@ -29,7 +29,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 )
 
 // Tests validate bucket LocationConstraint.

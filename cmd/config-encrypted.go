@@ -25,9 +25,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/kms"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/kms"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 	etcd "go.etcd.io/etcd/client/v3"
 )

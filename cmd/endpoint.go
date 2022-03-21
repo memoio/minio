@@ -32,9 +32,9 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/logger"
-	"github.com/memoio/miniointernal/mountinfo"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/logger"
+	"github.com/memoio/minio/internal/mountinfo"
 	"github.com/minio/minio-go/v7/pkg/set"
 	"github.com/minio/pkg/env"
 	xnet "github.com/minio/pkg/net"

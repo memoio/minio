@@ -23,7 +23,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	xhttp "github.com/memoio/miniointernal/http"
+	xhttp "github.com/memoio/minio/internal/http"
 	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 )

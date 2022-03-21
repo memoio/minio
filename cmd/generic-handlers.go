@@ -30,11 +30,11 @@ import (
 	xnet "github.com/minio/pkg/net"
 
 	"github.com/dustin/go-humanize"
-	"github.com/memoio/miniointernal/config/dns"
-	"github.com/memoio/miniointernal/crypto"
-	xhttp "github.com/memoio/miniointernal/http"
-	"github.com/memoio/miniointernal/http/stats"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/config/dns"
+	"github.com/memoio/minio/internal/crypto"
+	xhttp "github.com/memoio/minio/internal/http"
+	"github.com/memoio/minio/internal/http/stats"
+	"github.com/memoio/minio/internal/logger"
 )
 
 const (

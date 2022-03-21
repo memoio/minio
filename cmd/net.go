@@ -26,8 +26,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/minio-go/v7/pkg/set"
 	xnet "github.com/minio/pkg/net"
 )

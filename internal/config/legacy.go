@@ -17,7 +17,7 @@
 
 package config
 
-import "github.com/memoio/miniointernal/auth"
+import "github.com/memoio/minio/internal/auth"
 
 // One time migration code section
 

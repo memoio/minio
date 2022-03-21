@@ -18,8 +18,8 @@
 package logger
 
 import (
-	"github.com/memoio/miniointernal/config"
-	"github.com/memoio/miniointernal/logger/target/http"
+	"github.com/memoio/minio/internal/config"
+	"github.com/memoio/minio/internal/logger/target/http"
 )
 
 // Legacy envs

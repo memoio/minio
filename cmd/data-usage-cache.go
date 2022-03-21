@@ -31,9 +31,9 @@ import (
 
 	"github.com/cespare/xxhash/v2"
 	"github.com/klauspost/compress/zstd"
-	"github.com/memoio/miniointernal/bucket/lifecycle"
-	"github.com/memoio/miniointernal/hash"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/bucket/lifecycle"
+	"github.com/memoio/minio/internal/hash"
+	"github.com/memoio/minio/internal/logger"
 	"github.com/minio/madmin-go"
 	"github.com/tinylib/msgp/msgp"
 )

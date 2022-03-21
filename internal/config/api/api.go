@@ -25,7 +25,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/minio/internal/config"
 	"github.com/minio/pkg/env"
 )
 

@@ -23,7 +23,7 @@ import (
 	"sync"
 
 	"github.com/dustin/go-humanize"
-	"github.com/memoio/miniointernal/sync/errgroup"
+	"github.com/memoio/minio/internal/sync/errgroup"
 )
 
 const (

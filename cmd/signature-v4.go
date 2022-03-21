@@ -37,8 +37,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/memoio/miniointernal/auth"
-	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/minio/internal/auth"
+	xhttp "github.com/memoio/minio/internal/http"
 	"github.com/minio/minio-go/v7/pkg/s3utils"
 	"github.com/minio/minio-go/v7/pkg/set"
 )

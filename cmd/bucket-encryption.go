@@ -21,7 +21,7 @@ import (
 	"errors"
 	"io"
 
-	sse "github.com/memoio/miniointernal/bucket/encryption"
+	sse "github.com/memoio/minio/internal/bucket/encryption"
 )
 
 // BucketSSEConfigSys - in-memory cache of bucket encryption config

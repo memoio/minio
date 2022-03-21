@@ -26,8 +26,8 @@ import (
 	"io"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/memoio/miniointernal/fips"
-	"github.com/memoio/miniointernal/kms"
+	"github.com/memoio/minio/internal/fips"
+	"github.com/memoio/minio/internal/kms"
 	"github.com/secure-io/sio-go"
 	"github.com/secure-io/sio-go/sioutil"
 )

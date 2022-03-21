@@ -17,7 +17,7 @@
 
 package api
 
-import "github.com/memoio/miniointernal/config"
+import "github.com/memoio/minio/internal/config"
 
 // Help template for storageclass feature.
 var (

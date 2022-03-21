@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/memoio/miniointernal/auth"
-	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/minio/internal/auth"
+	xhttp "github.com/memoio/minio/internal/http"
 	"github.com/minio/madmin-go"
 )
 

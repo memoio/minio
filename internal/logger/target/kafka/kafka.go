@@ -30,8 +30,8 @@ import (
 	"github.com/Shopify/sarama"
 	saramatls "github.com/Shopify/sarama/tools/tls"
 
-	"github.com/memoio/miniointernal/logger/message/audit"
-	"github.com/memoio/miniointernal/logger/target/types"
+	"github.com/memoio/minio/internal/logger/message/audit"
+	"github.com/memoio/minio/internal/logger/target/types"
 	xnet "github.com/minio/pkg/net"
 )
 

@@ -18,7 +18,7 @@
 package notify
 
 import (
-	"github.com/memoio/miniointernal/event/target"
+	"github.com/memoio/minio/internal/event/target"
 )
 
 // Config - notification target configuration structure, holds

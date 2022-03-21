@@ -26,9 +26,9 @@ import (
 	jwtgo "github.com/golang-jwt/jwt/v4"
 	jwtreq "github.com/golang-jwt/jwt/v4/request"
 	lru "github.com/hashicorp/golang-lru"
-	"github.com/memoio/miniointernal/auth"
-	xjwt "github.com/memoio/miniointernal/jwt"
-	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/minio/internal/auth"
+	xjwt "github.com/memoio/minio/internal/jwt"
+	"github.com/memoio/minio/internal/logger"
 	iampolicy "github.com/minio/pkg/iam/policy"
 )
 

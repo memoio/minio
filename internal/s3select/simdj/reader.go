@@ -22,8 +22,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/memoio/miniointernal/s3select/json"
-	"github.com/memoio/miniointernal/s3select/sql"
+	"github.com/memoio/minio/internal/s3select/json"
+	"github.com/memoio/minio/internal/s3select/sql"
 	"github.com/minio/simdjson-go"
 )
 

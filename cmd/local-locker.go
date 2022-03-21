@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/memoio/miniointernal/dsync"
+	"github.com/memoio/minio/internal/dsync"
 )
 
 // lockRequesterInfo stores various info from the client for each lock that is requested.
