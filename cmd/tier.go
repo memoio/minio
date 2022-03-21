@@ -273,7 +273,7 @@ func (config *TierConfigMgr) configReader() (*PutObjReader, *ObjectOptions, erro
 
 	// Note: Local variables with names ek, oek, etc are named inline with
 	// acronyms defined here -
-	// https://github.com/memoio/minioblob/master/docs/security/README.md#acronyms
+	// https://github.com/memoio/minio/blob/master/docs/security/README.md#acronyms
 
 	// Encrypt json encoded tier configurations
 	metadata := make(map[string]string)

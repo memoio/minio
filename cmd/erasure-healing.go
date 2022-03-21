@@ -37,7 +37,7 @@ const reservedMetadataPrefixLowerDataShardFix = ReservedMetadataPrefixLower + "d
 // acceptable delta of "delta" duration with maxTime.
 //
 // This code is primarily used for heuristic detection of
-// incorrect shards, as per https://github.com/memoio/miniopull/13803
+// incorrect shards, as per https://github.com/memoio/minio/pull/13803
 //
 // This check only is active if we could find maximally
 // occurring disk mtimes that are somewhat same across

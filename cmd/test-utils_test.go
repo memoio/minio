@@ -702,7 +702,7 @@ func newTestStreamingRequest(method, urlStr string, dataLength, chunkSize int64,
 
 	if body == nil {
 		// this is added to avoid panic during ioutil.ReadAll(req.Body).
-		// th stack trace can be found here  https://github.com/memoio/miniopull/2074 .
+		// th stack trace can be found here  https://github.com/memoio/minio/pull/2074 .
 		// This is very similar to https://github.com/golang/go/issues/7527.
 		req.Body = ioutil.NopCloser(bytes.NewReader([]byte("")))
 	}

@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-We always provide security updates for the [latest release](https://github.com/memoio/minioreleases/latest).
+We always provide security updates for the [latest release](https://github.com/memoio/minio/releases/latest).
 Whenever there is a security update you just need to upgrade to the latest version.
 
 ## Reporting a Vulnerability

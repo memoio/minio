@@ -221,7 +221,7 @@ func IsPCFTile() bool {
 //   MinIO (<OS>; <ARCH>[; <MODE>][; dcos][; kubernetes][; docker][; source]) MinIO/<VERSION> MinIO/<RELEASE-TAG> MinIO/<COMMIT-ID> [MinIO/universe-<PACKAGE-NAME>] [MinIO/helm-<HELM-VERSION>]
 //
 // Any change here should be discussed by opening an issue at
-// https://github.com/memoio/minioissues.
+// https://github.com/memoio/minio/issues.
 func getUserAgent(mode string) string {
 	userAgentParts := []string{}
 	// Helper function to concisely append a pair of strings to a

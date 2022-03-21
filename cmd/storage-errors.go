@@ -25,7 +25,7 @@ import (
 )
 
 // errUnexpected - unexpected error, requires manual intervention.
-var errUnexpected = StorageErr("unexpected error, please report this issue at https://github.com/memoio/minioissues")
+var errUnexpected = StorageErr("unexpected error, please report this issue at https://github.com/memoio/minio/issues")
 
 // errCorruptedFormat - corrupted backend format.
 var errCorruptedFormat = StorageErr("corrupted backend format, specified disk mount has unexpected previous content")

@@ -192,7 +192,7 @@ func (er erasureObjects) GetObjectNInfo(ctx context.Context, bucket, object stri
 				}
 				if !metaArr[index].AcceptableDelta(diskMTime, shardDiskTimeDelta) {
 					// If disk mTime mismatches it is considered outdated
-					// https://github.com/memoio/miniopull/13803
+					// https://github.com/memoio/minio/pull/13803
 					//
 					// This check only is active if we could find maximally
 					// occurring disk mtimes that are somewhat same across
