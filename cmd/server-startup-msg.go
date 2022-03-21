@@ -181,7 +181,7 @@ func printCLIAccessMsg(endPoint string, alias string) {
 	// Get saved credentials.
 	cred := globalActiveCred
 
-	const mcQuickStartGuide = "https://docs.min.io/docs/minio-client-quickstart-guide"
+	const mcQuickStartGuide = "https://www.memolabs.org/#/"
 
 	// Configure 'mc', following block prints platform specific information for minio client.
 	if color.IsTerminal() && !globalCLIContext.Anonymous {
