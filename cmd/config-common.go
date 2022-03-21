@@ -24,7 +24,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/minio/minio/internal/hash"
+	"github.com/memoio/miniointernal/hash"
 )
 
 var errConfigNotFound = errors.New("config file not found")

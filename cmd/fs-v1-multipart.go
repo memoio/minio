@@ -31,8 +31,8 @@ import (
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
-	xioutil "github.com/minio/minio/internal/ioutil"
-	"github.com/minio/minio/internal/logger"
+	xioutil "github.com/memoio/miniointernal/ioutil"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/pkg/trie"
 )
 

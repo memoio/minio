@@ -26,9 +26,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/minio/minio/internal/config"
-	"github.com/minio/minio/internal/lock"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/miniointernal/lock"
+	"github.com/memoio/miniointernal/logger"
 )
 
 // FS format version strings.

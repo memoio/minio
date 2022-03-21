@@ -24,8 +24,8 @@ import (
 
 	"github.com/minio/kes"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/auth"
-	"github.com/minio/minio/internal/config"
+	"github.com/memoio/minio/internal/auth"
+	"github.com/memoio/minio/internal/config"
 	iampolicy "github.com/minio/pkg/iam/policy"
 )
 

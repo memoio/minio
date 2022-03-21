@@ -37,10 +37,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/memoio/miniointernal/auth"
+	xhttp "github.com/memoio/miniointernal/http"
 	"github.com/minio/minio-go/v7/pkg/s3utils"
 	"github.com/minio/minio-go/v7/pkg/set"
-	"github.com/minio/minio/internal/auth"
-	xhttp "github.com/minio/minio/internal/http"
 )
 
 // AWS Signature Version '4' constants.

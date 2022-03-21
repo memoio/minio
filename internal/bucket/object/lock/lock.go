@@ -28,7 +28,7 @@ import (
 	"time"
 
 	"github.com/beevik/ntp"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/pkg/env"
 )
 

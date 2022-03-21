@@ -15,18 +15,18 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-package main // import "github.com/minio/minio"
+package main // import "github.com/memoio/minio"
 
 import (
 	"os"
 
 	// MUST be first import.
-	_ "github.com/minio/minio/internal/init"
+	_ "github.com/memoio/minio/internal/init"
 
-	minio "github.com/minio/minio/cmd"
+	minio "github.com/memoio/minio/cmd"
 
 	// Import gateway
-	_ "github.com/minio/minio/cmd/gateway"
+	_ "github.com/memoio/minio/cmd/gateway"
 )
 
 func main() {

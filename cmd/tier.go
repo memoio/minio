@@ -28,10 +28,10 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/memoio/miniointernal/crypto"
+	"github.com/memoio/miniointernal/hash"
+	"github.com/memoio/miniointernal/kms"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/crypto"
-	"github.com/minio/minio/internal/hash"
-	"github.com/minio/minio/internal/kms"
 )
 
 //go:generate msgp -file $GOFILE
@@ -273,7 +273,7 @@ func (config *TierConfigMgr) configReader() (*PutObjReader, *ObjectOptions, erro
 
 	// Note: Local variables with names ek, oek, etc are named inline with
 	// acronyms defined here -
-	// https://github.com/minio/minio/blob/master/docs/security/README.md#acronyms
+	// https://github.com/memoio/minioblob/master/docs/security/README.md#acronyms
 
 	// Encrypt json encoded tier configurations
 	metadata := make(map[string]string)

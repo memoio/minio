@@ -4,7 +4,7 @@ MinIO GCS Gateway allows you to access Google Cloud Storage (GCS) with Amazon S3
 
 ## Support
 
-Gateway implementations are frozen and are not accepting any new features. Please reports any bugs at <https://github.com/minio/minio/issues> . If you are an existing customer please login to <https://subnet.min.io> for production support.
+Gateway implementations are frozen and are not accepting any new features. Please reports any bugs at <https://github.com/memoio/minioissues> . If you are an existing customer please login to <https://subnet.min.io> for production support.
 
 ## 1. Run MinIO Gateway for GCS
 
@@ -49,7 +49,7 @@ MinIO Gateway comes with an embedded web-based object browser that outputs conte
 
 | Dashboard                                                                                   | Creating a bucket                                                                           |
 | -------------                                                                               | -------------                                                                               |
-| ![Dashboard](https://github.com/minio/minio/blob/master/docs/screenshots/pic1.png?raw=true) | ![Dashboard](https://github.com/minio/minio/blob/master/docs/screenshots/pic2.png?raw=true) |
+| ![Dashboard](https://github.com/memoio/minioblob/master/docs/screenshots/pic1.png?raw=true) | ![Dashboard](https://github.com/memoio/minioblob/master/docs/screenshots/pic2.png?raw=true) |
 
 ## 3. Test Using MinIO Client
 

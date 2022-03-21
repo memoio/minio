@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/memoio/miniointernal/hash"
 	miniogo "github.com/minio/minio-go/v7"
-	"github.com/minio/minio/internal/hash"
 
-	minio "github.com/minio/minio/cmd"
+	minio "github.com/memoio/miniocmd"
 )
 
 func errResponse(code string) miniogo.ErrorResponse {

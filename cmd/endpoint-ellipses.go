@@ -23,8 +23,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/memoio/miniointernal/config"
 	"github.com/minio/minio-go/v7/pkg/set"
-	"github.com/minio/minio/internal/config"
 	"github.com/minio/pkg/ellipses"
 	"github.com/minio/pkg/env"
 )

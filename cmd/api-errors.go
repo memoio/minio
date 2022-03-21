@@ -30,19 +30,19 @@ import (
 	"github.com/Azure/azure-storage-blob-go/azblob"
 	"google.golang.org/api/googleapi"
 
+	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/miniointernal/bucket/lifecycle"
+	"github.com/memoio/miniointernal/bucket/replication"
+	"github.com/memoio/miniointernal/config/dns"
+	"github.com/memoio/miniointernal/crypto"
+	"github.com/memoio/miniointernal/logger"
 	minio "github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/tags"
-	"github.com/minio/minio/internal/auth"
-	"github.com/minio/minio/internal/bucket/lifecycle"
-	"github.com/minio/minio/internal/bucket/replication"
-	"github.com/minio/minio/internal/config/dns"
-	"github.com/minio/minio/internal/crypto"
-	"github.com/minio/minio/internal/logger"
 
-	objectlock "github.com/minio/minio/internal/bucket/object/lock"
-	"github.com/minio/minio/internal/bucket/versioning"
-	"github.com/minio/minio/internal/event"
-	"github.com/minio/minio/internal/hash"
+	objectlock "github.com/memoio/miniointernal/bucket/object/lock"
+	"github.com/memoio/miniointernal/bucket/versioning"
+	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/miniointernal/hash"
 	"github.com/minio/pkg/bucket/policy"
 )
 
@@ -253,7 +253,7 @@ const (
 	ErrInvalidStorageClass
 	ErrBackendDown
 	// Add new extended error codes here.
-	// Please open a https://github.com/minio/minio/issues before adding
+	// Please open a https://github.com/memoio/minioissues before adding
 	// new error codes here.
 
 	ErrMalformedJSON

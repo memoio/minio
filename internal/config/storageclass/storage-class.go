@@ -24,7 +24,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/minio/minio/internal/config"
+	"github.com/memoio/miniointernal/config"
 	"github.com/minio/pkg/env"
 )
 

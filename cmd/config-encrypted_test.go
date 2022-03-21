@@ -21,8 +21,8 @@ import (
 	"bytes"
 	"testing"
 
+	"github.com/memoio/miniointernal/auth"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/auth"
 )
 
 func TestDecryptData(t *testing.T) {

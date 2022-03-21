@@ -23,8 +23,8 @@ import (
 	"time"
 
 	"github.com/bcicen/jstream"
-	jsonfmt "github.com/minio/minio/internal/s3select/json"
-	"github.com/minio/minio/internal/s3select/sql"
+	jsonfmt "github.com/memoio/miniointernal/s3select/json"
+	"github.com/memoio/miniointernal/s3select/sql"
 	parquetgo "github.com/minio/parquet-go"
 	parquetgen "github.com/minio/parquet-go/gen-go/parquet"
 )

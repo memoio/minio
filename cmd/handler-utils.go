@@ -32,11 +32,11 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/miniointernal/handlers"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/auth"
-	"github.com/minio/minio/internal/handlers"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/logger"
 )
 
 const (

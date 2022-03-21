@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	xhttp "github.com/minio/minio/internal/http"
+	xhttp "github.com/memoio/miniointernal/http"
 )
 
 func TestParseMode(t *testing.T) {

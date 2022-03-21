@@ -30,9 +30,9 @@ import (
 
 	"github.com/dustin/go-humanize"
 	"github.com/google/uuid"
+	"github.com/memoio/miniointernal/hash"
+	xhttp "github.com/memoio/miniointernal/http"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/hash"
-	xhttp "github.com/minio/minio/internal/http"
 	"github.com/minio/pkg/randreader"
 )
 

@@ -17,7 +17,7 @@
 
 package cmd
 
-import "github.com/minio/minio/internal/bucket/versioning"
+import "github.com/memoio/miniointernal/bucket/versioning"
 
 // BucketVersioningSys - policy subsystem.
 type BucketVersioningSys struct{}

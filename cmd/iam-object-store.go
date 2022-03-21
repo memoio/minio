@@ -25,10 +25,10 @@ import (
 	"unicode/utf8"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/minio/minio/internal/auth"
-	"github.com/minio/minio/internal/config"
-	"github.com/minio/minio/internal/kms"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/miniointernal/kms"
+	"github.com/memoio/miniointernal/logger"
 )
 
 // IAMObjectStore implements IAMStorageAPI

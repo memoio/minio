@@ -24,7 +24,7 @@ import (
 	"net/http"
 	"strings"
 
-	color "github.com/minio/minio/internal/color"
+	color "github.com/memoio/miniointernal/color"
 )
 
 // Extra ASN1 OIDs that we may need to handle

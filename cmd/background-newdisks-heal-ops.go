@@ -30,10 +30,10 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
+	"github.com/memoio/miniointernal/color"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
 	"github.com/minio/minio-go/v7/pkg/set"
-	"github.com/minio/minio/internal/color"
-	"github.com/minio/minio/internal/logger"
 	"github.com/minio/pkg/console"
 )
 

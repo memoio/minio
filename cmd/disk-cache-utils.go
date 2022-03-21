@@ -30,8 +30,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/minio/minio/internal/crypto"
-	"github.com/minio/minio/internal/kms"
+	"github.com/memoio/miniointernal/crypto"
+	"github.com/memoio/miniointernal/kms"
 )
 
 // CacheStatusType - whether the request was served from cache.

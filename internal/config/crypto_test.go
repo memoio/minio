@@ -24,7 +24,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/minio/minio/internal/kms"
+	"github.com/memoio/miniointernal/kms"
 )
 
 var encryptDecryptTests = []struct {

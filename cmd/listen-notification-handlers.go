@@ -23,8 +23,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/minio/minio/internal/event"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/miniointernal/logger"
 	policy "github.com/minio/pkg/bucket/policy"
 )
 

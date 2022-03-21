@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/logger"
 )
 
 // localMetacacheMgr is the *local* manager for this peer.

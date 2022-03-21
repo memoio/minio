@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/minio/internal/bucket/replication"
+	"github.com/memoio/miniointernal/bucket/replication"
 )
 
 func (b *BucketReplicationStats) hasReplicationUsage() bool {

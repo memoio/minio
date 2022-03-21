@@ -19,8 +19,8 @@ package hdfs
 import (
 	"strings"
 
+	minio "github.com/memoio/miniocmd"
 	"github.com/minio/minio-go/v7/pkg/s3utils"
-	minio "github.com/minio/minio/cmd"
 )
 
 const (

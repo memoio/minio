@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/memoio/miniointernal/config"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/config"
 	"github.com/minio/pkg/env"
 )
 

@@ -30,10 +30,10 @@ import (
 	"strings"
 	"time"
 
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/logger/message/log"
 	"github.com/minio/highwayhash"
 	"github.com/minio/minio-go/v7/pkg/set"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/logger/message/log"
 )
 
 // HighwayHash key for logging in anonymous mode

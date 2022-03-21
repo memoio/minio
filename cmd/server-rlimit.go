@@ -21,8 +21,8 @@ import (
 	"runtime"
 	"runtime/debug"
 
-	"github.com/minio/minio/internal/kernel"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/kernel"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/pkg/sys"
 )
 

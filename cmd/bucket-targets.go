@@ -24,15 +24,15 @@ import (
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
+	"github.com/memoio/miniointernal/bucket/replication"
+	"github.com/memoio/miniointernal/bucket/versioning"
+	"github.com/memoio/miniointernal/crypto"
+	"github.com/memoio/miniointernal/kms"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
 	minio "github.com/minio/minio-go/v7"
 	miniogo "github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
-	"github.com/minio/minio/internal/bucket/replication"
-	"github.com/minio/minio/internal/bucket/versioning"
-	"github.com/minio/minio/internal/crypto"
-	"github.com/minio/minio/internal/kms"
-	"github.com/minio/minio/internal/logger"
 )
 
 const (

@@ -23,10 +23,10 @@ import (
 	"io"
 	"net/url"
 
-	"github.com/minio/minio/internal/dsync"
-	"github.com/minio/minio/internal/http"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/rest"
+	"github.com/memoio/miniointernal/dsync"
+	"github.com/memoio/miniointernal/http"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/rest"
 )
 
 // lockRESTClient is authenticable lock REST client

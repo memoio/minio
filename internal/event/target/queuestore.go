@@ -26,7 +26,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/minio/minio/internal/event"
+	"github.com/memoio/miniointernal/event"
 )
 
 const (

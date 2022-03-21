@@ -25,10 +25,10 @@ import (
 	"time"
 	"unicode/utf8"
 
+	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/miniointernal/kms"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/config"
-	"github.com/minio/minio/internal/kms"
-	"github.com/minio/minio/internal/logger"
 	etcd "go.etcd.io/etcd/client/v3"
 )
 

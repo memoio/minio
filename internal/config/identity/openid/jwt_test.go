@@ -27,8 +27,8 @@ import (
 	"time"
 
 	jwtg "github.com/golang-jwt/jwt/v4"
-	"github.com/minio/minio/internal/config"
-	jwtm "github.com/minio/minio/internal/jwt"
+	"github.com/memoio/miniointernal/config"
+	jwtm "github.com/memoio/miniointernal/jwt"
 	xnet "github.com/minio/pkg/net"
 )
 

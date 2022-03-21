@@ -24,10 +24,10 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
+	"github.com/memoio/miniointernal/color"
+	"github.com/memoio/miniointernal/config/storageclass"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/color"
-	"github.com/minio/minio/internal/config/storageclass"
-	"github.com/minio/minio/internal/logger"
 	"github.com/minio/pkg/console"
 	"github.com/minio/pkg/wildcard"
 )

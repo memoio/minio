@@ -31,8 +31,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/memoio/miniointernal/auth"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/auth"
 )
 
 // adminErasureTestBed - encapsulates subsystems that need to be setup for

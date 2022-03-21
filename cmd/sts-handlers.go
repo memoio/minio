@@ -30,11 +30,11 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/memoio/miniointernal/auth"
+	"github.com/memoio/miniointernal/config/identity/openid"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/auth"
-	"github.com/minio/minio/internal/config/identity/openid"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/logger"
 	iampolicy "github.com/minio/pkg/iam/policy"
 	"github.com/minio/pkg/wildcard"
 )

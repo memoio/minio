@@ -33,12 +33,12 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
+	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/miniointernal/http"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/miniointernal/rest"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/event"
-	"github.com/minio/minio/internal/http"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/logger"
-	"github.com/minio/minio/internal/rest"
 	xnet "github.com/minio/pkg/net"
 	"github.com/tinylib/msgp/msgp"
 )

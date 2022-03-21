@@ -264,7 +264,7 @@ func disksWithAllParts(ctx context.Context, onlineDisks []StorageAPI, partsMetad
 	erasureDistributionReliable := true
 	if inconsistent > len(partsMetadata)/2 {
 		// If there are too many inconsistent files, then we can't trust erasure.Distribution (most likely
-		// because of bugs found in CopyObject/PutObjectTags) https://github.com/minio/minio/pull/10772
+		// because of bugs found in CopyObject/PutObjectTags) https://github.com/memoio/miniopull/10772
 		erasureDistributionReliable = false
 	}
 
@@ -315,7 +315,7 @@ func disksWithAllParts(ctx context.Context, onlineDisks []StorageAPI, partsMetad
 			if !partsMetadata[i].AcceptableDelta(diskMTime, shardDiskTimeDelta) {
 				// not with in acceptable delta, skip.
 				// If disk mTime mismatches it is considered outdated
-				// https://github.com/minio/minio/pull/13803
+				// https://github.com/memoio/miniopull/13803
 				//
 				// This check only is active if we could find maximally
 				// occurring disk mtimes that are somewhat same across

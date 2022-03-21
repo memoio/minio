@@ -23,8 +23,8 @@ import (
 	"runtime"
 	"time"
 
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/logger"
 )
 
 // getLocalServerProperty - returns madmin.ServerProperties for only the

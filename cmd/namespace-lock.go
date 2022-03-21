@@ -28,9 +28,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/minio/internal/dsync"
-	"github.com/minio/minio/internal/logger"
-	"github.com/minio/minio/internal/lsync"
+	"github.com/memoio/miniointernal/dsync"
+	"github.com/memoio/miniointernal/logger"
+	"github.com/memoio/miniointernal/lsync"
 )
 
 // local lock servers
@@ -321,7 +321,7 @@ func getSource(n int) string {
 	if ok {
 		filename = pathutil.Base(filename)
 		funcName = strings.TrimPrefix(runtime.FuncForPC(pc).Name(),
-			"github.com/minio/minio/cmd.")
+			"github.com/memoio/miniocmd.")
 	} else {
 		filename = "<unknown>"
 		lineNum = 0

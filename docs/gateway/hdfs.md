@@ -6,7 +6,7 @@ MinIO HDFS gateway adds Amazon S3 API support to Hadoop HDFS filesystem. Applica
 
 ## Support
 
-Gateway implementations are frozen and are not accepting any new features. Please reports any bugs at <https://github.com/minio/minio/issues> . If you are an existing customer please login to <https://subnet.min.io> for production support.
+Gateway implementations are frozen and are not accepting any new features. Please reports any bugs at <https://github.com/memoio/minioissues> . If you are an existing customer please login to <https://subnet.min.io> for production support.
 
 ## Run MinIO Gateway for HDFS Storage
 
@@ -88,7 +88,7 @@ export KRB5REALM=REALM.COM
 
 | Dashboard                                                                                   | Creating a bucket                                                                           |
 | -------------                                                                               | -------------                                                                               |
-| ![Dashboard](https://github.com/minio/minio/blob/master/docs/screenshots/pic1.png?raw=true) | ![Dashboard](https://github.com/minio/minio/blob/master/docs/screenshots/pic2.png?raw=true) |
+| ![Dashboard](https://github.com/memoio/minioblob/master/docs/screenshots/pic1.png?raw=true) | ![Dashboard](https://github.com/memoio/minioblob/master/docs/screenshots/pic2.png?raw=true) |
 
 ## Test using MinIO Client `mc`
 

@@ -18,7 +18,7 @@
 package opa
 
 import (
-	"github.com/minio/minio/internal/config"
+	"github.com/memoio/miniointernal/config"
 )
 
 // Legacy OPA envs

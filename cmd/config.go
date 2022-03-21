@@ -28,9 +28,9 @@ import (
 	"unicode/utf8"
 
 	jsoniter "github.com/json-iterator/go"
+	"github.com/memoio/miniointernal/config"
+	"github.com/memoio/miniointernal/kms"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/config"
-	"github.com/minio/minio/internal/kms"
 )
 
 const (

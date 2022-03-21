@@ -38,11 +38,11 @@ import (
 
 	"github.com/dustin/go-humanize"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/minio/minio/internal/bucket/lifecycle"
-	"github.com/minio/minio/internal/color"
-	"github.com/minio/minio/internal/disk"
-	xioutil "github.com/minio/minio/internal/ioutil"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/bucket/lifecycle"
+	"github.com/memoio/miniointernal/color"
+	"github.com/memoio/miniointernal/disk"
+	xioutil "github.com/memoio/miniointernal/ioutil"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/pkg/console"
 	"github.com/yargevad/filepathx"
 )

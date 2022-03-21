@@ -26,10 +26,10 @@ import (
 	"strings"
 	"time"
 
+	minio "github.com/memoio/miniocmd"
 	"github.com/minio/minio-go/v7/pkg/encrypt"
-	minio "github.com/minio/minio/cmd"
 
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/logger"
 )
 
 const (

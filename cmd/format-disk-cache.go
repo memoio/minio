@@ -30,7 +30,7 @@ import (
 	"strings"
 
 	jsoniter "github.com/json-iterator/go"
-	"github.com/minio/minio/internal/logger"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/sio"
 )
 

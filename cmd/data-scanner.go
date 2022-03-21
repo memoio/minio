@@ -35,13 +35,13 @@ import (
 
 	"github.com/bits-and-blooms/bloom/v3"
 	"github.com/dustin/go-humanize"
+	"github.com/memoio/miniointernal/bucket/lifecycle"
+	"github.com/memoio/miniointernal/bucket/replication"
+	"github.com/memoio/miniointernal/color"
+	"github.com/memoio/miniointernal/config/heal"
+	"github.com/memoio/miniointernal/event"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/madmin-go"
-	"github.com/minio/minio/internal/bucket/lifecycle"
-	"github.com/minio/minio/internal/bucket/replication"
-	"github.com/minio/minio/internal/color"
-	"github.com/minio/minio/internal/config/heal"
-	"github.com/minio/minio/internal/event"
-	"github.com/minio/minio/internal/logger"
 	"github.com/minio/pkg/console"
 )
 

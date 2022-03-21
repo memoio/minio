@@ -28,8 +28,8 @@ import (
 	"time"
 
 	"github.com/klauspost/compress/gzhttp"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/logger/message/audit"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/logger/message/audit"
 )
 
 // ResponseWriter - is a wrapper to trap the http response status code.

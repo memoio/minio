@@ -29,9 +29,9 @@ import (
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/lock"
-	"github.com/minio/minio/internal/logger"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/lock"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/pkg/mimedb"
 )
 

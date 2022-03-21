@@ -26,10 +26,10 @@ import (
 	"time"
 
 	jsoniter "github.com/json-iterator/go"
+	"github.com/memoio/miniointernal/handlers"
+	xhttp "github.com/memoio/miniointernal/http"
+	"github.com/memoio/miniointernal/logger"
 	miniogopolicy "github.com/minio/minio-go/v7/pkg/policy"
-	"github.com/minio/minio/internal/handlers"
-	xhttp "github.com/minio/minio/internal/http"
-	"github.com/minio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 )
 

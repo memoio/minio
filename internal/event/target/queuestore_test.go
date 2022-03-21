@@ -24,7 +24,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/minio/minio/internal/event"
+	"github.com/memoio/miniointernal/event"
 )
 
 // TestDir

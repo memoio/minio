@@ -39,11 +39,11 @@ import (
 	"github.com/Azure/azure-pipeline-go/pipeline"
 	"github.com/Azure/azure-storage-blob-go/azblob"
 	"github.com/dustin/go-humanize"
+	minio "github.com/memoio/miniocmd"
+	"github.com/memoio/miniointernal/logger"
 	"github.com/minio/cli"
 	"github.com/minio/madmin-go"
 	miniogopolicy "github.com/minio/minio-go/v7/pkg/policy"
-	minio "github.com/minio/minio/cmd"
-	"github.com/minio/minio/internal/logger"
 	"github.com/minio/pkg/bucket/policy"
 	"github.com/minio/pkg/bucket/policy/condition"
 	"github.com/minio/pkg/env"
@@ -692,7 +692,7 @@ func (a *azureObjects) ListObjects(ctx context.Context, bucket, prefix, marker, 
 			// or through the AWS Management Console, and are encrypted by SSE-S3
 			// or plaintext, have ETags that are an MD5 digest of their object data.
 			//
-			// Some applications depend on this behavior refer https://github.com/minio/minio/issues/6550
+			// Some applications depend on this behavior refer https://github.com/memoio/minioissues/6550
 			// So we handle it here and make this consistent.
 			etag := minio.ToS3ETag(string(blob.Properties.Etag))
 			switch {
@@ -848,7 +848,7 @@ func (a *azureObjects) GetObjectInfo(ctx context.Context, bucket, object string,
 	// or through the AWS Management Console, and are encrypted by SSE-S3
 	// or plaintext, have ETags that are an MD5 digest of their object data.
 	//
-	// Some applications depend on this behavior refer https://github.com/minio/minio/issues/6550
+	// Some applications depend on this behavior refer https://github.com/memoio/minioissues/6550
 	// So we handle it here and make this consistent.
 	etag := minio.ToS3ETag(realETag)
 	metadata := blob.NewMetadata()
