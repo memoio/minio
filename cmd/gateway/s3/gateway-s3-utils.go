@@ -17,7 +17,7 @@
 package s3
 
 import (
-	minio "github.com/memoio/miniocmd"
+	minio "github.com/memoio/minio/cmd"
 )
 
 // List of header keys to be filtered, usually

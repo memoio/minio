@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"testing"
 
-	minio "github.com/memoio/miniocmd"
+	minio "github.com/memoio/minio/cmd"
 )
 
 // Tests for GW metadata format validity.

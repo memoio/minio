@@ -23,7 +23,7 @@ import (
 	"github.com/memoio/minio/internal/hash"
 	miniogo "github.com/minio/minio-go/v7"
 
-	minio "github.com/memoio/miniocmd"
+	minio "github.com/memoio/minio/cmd"
 )
 
 func errResponse(code string) miniogo.ErrorResponse {

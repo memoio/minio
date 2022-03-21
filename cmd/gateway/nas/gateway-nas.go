@@ -19,7 +19,7 @@ package nas
 import (
 	"context"
 
-	minio "github.com/memoio/miniocmd"
+	minio "github.com/memoio/minio/cmd"
 	"github.com/minio/cli"
 	"github.com/minio/madmin-go"
 )

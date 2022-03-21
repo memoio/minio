@@ -27,10 +27,10 @@ import (
 	"strings"
 	"time"
 
+	minio "github.com/memoio/minio/cmd"
 	"github.com/memoio/minio/internal/config"
 	xhttp "github.com/memoio/minio/internal/http"
 	"github.com/memoio/minio/internal/logger"
-	minio "github.com/memoio/miniocmd"
 	"github.com/minio/cli"
 	"github.com/minio/madmin-go"
 	miniogo "github.com/minio/minio-go/v7"

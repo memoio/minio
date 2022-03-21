@@ -98,7 +98,7 @@ func redactLDAPPwd(s string) string {
 
 // getOpName sanitizes the operation name for mc
 func getOpName(name string) (op string) {
-	op = strings.TrimPrefix(name, "github.com/memoio/miniocmd.")
+	op = strings.TrimPrefix(name, "github.com/memoio/minio/cmd.")
 	op = strings.TrimSuffix(op, "Handler-fm")
 	op = strings.Replace(op, "objectAPIHandlers", "s3", 1)
 	op = strings.Replace(op, "adminAPIHandlers", "admin", 1)

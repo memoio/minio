@@ -34,7 +34,7 @@ import (
 	"net/http"
 	"os"
 
-	cmd "github.com/memoio/miniocmd"
+	cmd "github.com/memoio/minio/cmd"
 	cr "github.com/minio/minio-go/v7/pkg/credentials"
 )
 
