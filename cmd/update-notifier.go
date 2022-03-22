@@ -25,7 +25,6 @@ import (
 	"time"
 
 	"github.com/cheggaaa/pb"
-	humanize "github.com/dustin/go-humanize"
 	"github.com/memoio/minio/internal/color"
 )
 
@@ -38,15 +37,9 @@ func prepareUpdateMessage(downloadURL string, older time.Duration) string {
 
 	// Compute friendly duration string to indicate time
 	// difference between newer and current release.
-	t := time.Time{}
-	newerThan := humanize.RelTime(t, t.Add(older), "ago", "")
-
-	if globalCLIContext.JSON {
-		return fmt.Sprintf("You are running an older version of MinIO released %s, update: %s", newerThan, downloadURL)
-	}
 
 	// Return the nicely colored and formatted update message.
-	return colorizeUpdateMessage(downloadURL, newerThan)
+	return ""
 }
 
 // colorizeUpdateMessage - inspired from Yeoman project npm package https://github.com/yeoman/update-notifier
