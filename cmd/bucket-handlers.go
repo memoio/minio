@@ -63,6 +63,10 @@ const (
 	bucketReplicationConfig = "replication.xml"
 )
 
+func NewhashReader(src io.Reader, size int64, md5Hex string, sha256Hex string, actualSize int64) (*hash.Reader, error) {
+	return hash.NewReader(src, size, md5Hex, sha256Hex, actualSize)
+}
+
 // Check if there are buckets on server without corresponding entry in etcd backend and
 // make entries. Here is the general flow
 // - Range over all the available buckets
