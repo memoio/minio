@@ -23,6 +23,7 @@ import (
 	"errors"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"sort"
 
@@ -1095,10 +1096,12 @@ func (a adminAPIHandlers) AccountInfoHandler(w http.ResponseWriter, r *http.Requ
 
 	var dataUsageInfo DataUsageInfo
 	var err error
-	if !globalIsGateway {
-		// Load the latest calculated data usage
-		dataUsageInfo, _ = loadDataUsageFromBackend(ctx, objectAPI)
-	}
+	// if !globalIsGateway {
+
+	// Load the latest calculated data usage
+	dataUsageInfo, _ = loadDataUsageFromBackend(ctx, objectAPI)
+	// }
+	// log.Println("dataUsageInfo", dataUsageInfo)
 
 	// If etcd, dns federation configured list buckets from etcd.
 	var buckets []BucketInfo
