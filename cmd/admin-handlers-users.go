@@ -23,7 +23,6 @@ import (
 	"errors"
 	"io"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"sort"
 
