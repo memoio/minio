@@ -47,7 +47,7 @@ func (sys *BucketVersioningSys) Get(bucket string) (*versioning.Versioning, erro
 		if objAPI == nil {
 			return nil, errServerNotInitialized
 		}
-		return nil, NotImplemented{}
+		return &versioning.Versioning{}, nil
 	}
 	return globalBucketMetadataSys.GetVersioningConfig(bucket)
 }
