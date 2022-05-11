@@ -20,6 +20,7 @@ package cmd
 import (
 	"encoding/xml"
 	"io"
+	"log"
 	"net/http"
 
 	humanize "github.com/dustin/go-humanize"
@@ -131,6 +132,7 @@ func (api objectAPIHandlers) GetBucketVersioningHandler(w http.ResponseWriter, r
 	}
 
 	config, err := globalBucketVersioningSys.Get(bucket)
+	log.Println("TEST get bucket versioning")
 	if err != nil {
 		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
 		return

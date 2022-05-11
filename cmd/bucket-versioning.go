@@ -47,7 +47,7 @@ func (sys *BucketVersioningSys) Get(bucket string) (*versioning.Versioning, erro
 		if objAPI == nil {
 			return nil, errServerNotInitialized
 		}
-		return &versioning.Versioning{}, nil
+		return &versioning.Versioning{XMLNS: "http://s3.amazonaws.com/doc/2006-03-01/"}, nil
 	}
 	return globalBucketMetadataSys.GetVersioningConfig(bucket)
 }
