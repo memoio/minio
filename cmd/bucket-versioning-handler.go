@@ -132,11 +132,12 @@ func (api objectAPIHandlers) GetBucketVersioningHandler(w http.ResponseWriter, r
 	}
 
 	config, err := globalBucketVersioningSys.Get(bucket)
-	log.Println("TEST get bucket versioning")
 	if err != nil {
 		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
+		log.Println("TEST error: ", err)
 		return
 	}
+	log.Println("TEST get bucket versioning")
 
 	configData, err := xml.Marshal(config)
 	if err != nil {
