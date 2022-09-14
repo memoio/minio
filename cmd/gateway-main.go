@@ -305,15 +305,6 @@ func StartGateway(ctx *cli.Context, gw Gateway) {
 
 	go globalIAMSys.Init(GlobalContext, newObject, globalEtcdClient, globalRefreshIAMInterval)
 
-	if gatewayName == NASBackendGateway {
-		buckets, err := newObject.ListBuckets(GlobalContext)
-		if err != nil {
-			logger.Fatal(err, "Unable to list buckets")
-		}
-		logger.FatalIf(globalBucketMetadataSys.Init(GlobalContext, buckets, newObject), "Unable to initialize bucket metadata")
-
-		logger.FatalIf(globalNotificationSys.InitBucketTargets(GlobalContext, newObject), "Unable to initialize bucket targets for notification system")
-	}
 
 	if globalCacheConfig.Enabled {
 		// initialize the new disk cache objects.

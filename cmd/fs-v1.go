@@ -213,6 +213,14 @@ func (fs *FSObjects) LocalStorageInfo(ctx context.Context) (StorageInfo, []error
 	return fs.StorageInfo(ctx)
 }
 
+func (fs *FSObjects) QueryPrice(ctx context.Context) (int, error) {
+	return 0, NotImplemented{}
+}
+
+func (fs *FSObjects) GetBalanceInfo(ctx context.Context) (string, error) {
+	return "", NotImplemented{}
+}
+
 // StorageInfo - returns underlying storage statistics.
 func (fs *FSObjects) StorageInfo(ctx context.Context) (StorageInfo, []error) {
 	di, err := getDiskInfo(fs.fsPath)

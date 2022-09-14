@@ -815,3 +815,11 @@ func (l *s3Objects) IsEncryptionSupported() bool {
 func (l *s3Objects) IsTaggingSupported() bool {
 	return true
 }
+
+func (l *s3Objects) QueryPrice(ctx context.Context) (int, error) {
+	return -1, minio.NotImplemented{}
+}
+
+func (l *s3Objects) GetBalanceInfo(ctx context.Context) (string, error) {
+	return "", minio.NotImplemented{}
+}

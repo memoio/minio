@@ -169,6 +169,10 @@ type ObjectLayer interface {
 	// Locking operations on object.
 	NewNSLock(bucket string, objects ...string) RWLocker
 
+	// Query
+	QueryPrice(ctx context.Context) (int, error)
+	GetBalanceInfo(ctx context.Context) (string, error)
+
 	// Storage operations.
 	Shutdown(context.Context) error
 	NSScanner(ctx context.Context, bf *bloomFilter, updates chan<- DataUsageInfo, wantCycle uint32) error

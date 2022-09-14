@@ -476,6 +476,14 @@ func registerAPIRouter(router *mux.Router) {
 	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
 		collectAPIStats("listennotification", maxClients(gz(httpTraceAll(api.ListenNotificationHandler))))).Queries("events", "{events:.*}")
 
+	// Query
+	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
+		collectAPIStats("queryprice", maxClients(gz(httpTraceAll(api.QueryPriceHandler))))).Queries("queryprice", "")
+
+	// GetBalance
+	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
+		collectAPIStats("getbalanceinfo", maxClients(gz(httpTraceAll(api.GetBalanceInfoHandler))))).Queries("getbalance", "")
+
 	// ListBuckets
 	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
 		collectAPIStats("listbuckets", maxClients(gz(httpTraceAll(api.ListBucketsHandler)))))

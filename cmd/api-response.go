@@ -221,6 +221,22 @@ type ListBucketsResponse struct {
 	} // Buckets are nested
 }
 
+type QueryPirceResponse struct {
+	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
+
+	Owner Owner
+
+	Price int
+}
+
+type BalanceInfoResponse struct {
+	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
+
+	Owner Owner
+
+	Balance string
+}
+
 // Upload container for in progress multipart upload
 type Upload struct {
 	Key          string
@@ -431,6 +447,32 @@ func generateListBucketsResponse(buckets []BucketInfo) ListBucketsResponse {
 
 	data.Owner = owner
 	data.Buckets.Buckets = listbuckets
+
+	return data
+}
+
+func generateQueryPriceResponse(price int) QueryPirceResponse {
+	data := QueryPirceResponse{}
+	owner := Owner{
+		ID:          globalMinioDefaultOwnerID,
+		DisplayName: "minio",
+	}
+
+	data.Owner = owner
+	data.Price = price
+
+	return data
+}
+
+func generateGetBalanceInfoResponse(balance string) BalanceInfoResponse {
+	data := BalanceInfoResponse{}
+	owner := Owner{
+		ID:          globalMinioDefaultOwnerID,
+		DisplayName: "minio",
+	}
+
+	data.Owner = owner
+	data.Balance = balance
 
 	return data
 }

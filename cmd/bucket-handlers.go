@@ -291,7 +291,7 @@ func (api objectAPIHandlers) ListMultipartUploadsHandler(w http.ResponseWriter, 
 // owned by the authenticated sender of the request.
 func (api objectAPIHandlers) ListBucketsHandler(w http.ResponseWriter, r *http.Request) {
 	ctx := newContext(r, w, "ListBuckets")
-
+	fmt.Println("ListBucketsHandler")
 	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
 
 	objectAPI := api.ObjectAPI()
@@ -1334,6 +1334,59 @@ func (api objectAPIHandlers) DeleteBucketHandler(w http.ResponseWriter, r *http.
 		UserAgent:    r.UserAgent(),
 		Host:         handlers.GetSourceIP(r),
 	})
+}
+
+func (api objectAPIHandlers) QueryPriceHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := newContext(r, w, "QueryPrice")
+	fmt.Println("QueryPriceHandler")
+	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
+
+	objectAPI := api.ObjectAPI()
+	if objectAPI == nil {
+		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
+		return
+	}
+
+	queryPrice := objectAPI.QueryPrice
+
+	price, err := queryPrice(ctx)
+	if err != nil {
+		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
+		return
+	}
+
+	// Generate response.
+	response := generateQueryPriceResponse(price)
+	encodedSuccessResponse := encodeResponse(response)
+
+	// Write response.
+	writeSuccessResponseXML(w, encodedSuccessResponse)
+}
+
+func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := newContext(r, w, "GetBalance")
+	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
+
+	objectAPI := api.ObjectAPI()
+	if objectAPI == nil {
+		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
+		return
+	}
+
+	getBalanceInfo := objectAPI.GetBalanceInfo
+
+	balanceinfo, err := getBalanceInfo(ctx)
+	if err != nil {
+		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
+		return
+	}
+
+	// Generate response.
+	response := generateGetBalanceInfoResponse(balanceinfo)
+	encodedSuccessResponse := encodeResponse(response)
+
+	// Write response.
+	writeSuccessResponseXML(w, encodedSuccessResponse)
 }
 
 // PutBucketObjectLockConfigHandler - PUT Bucket object lock configuration.
