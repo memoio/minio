@@ -1338,7 +1338,6 @@ func (api objectAPIHandlers) DeleteBucketHandler(w http.ResponseWriter, r *http.
 
 func (api objectAPIHandlers) QueryPriceHandler(w http.ResponseWriter, r *http.Request) {
 	ctx := newContext(r, w, "QueryPrice")
-	fmt.Println("QueryPriceHandler")
 	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
 
 	objectAPI := api.ObjectAPI()
@@ -1367,6 +1366,9 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 	ctx := newContext(r, w, "GetBalance")
 	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
 
+	vars := mux.Vars(r)
+	addr := vars["bucket"]
+	fmt.Println("addr", addr)
 	objectAPI := api.ObjectAPI()
 	if objectAPI == nil {
 		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
@@ -1375,7 +1377,7 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 
 	getBalanceInfo := objectAPI.GetBalanceInfo
 
-	balanceinfo, err := getBalanceInfo(ctx)
+	balanceinfo, err := getBalanceInfo(ctx, addr)
 	if err != nil {
 		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
 		return
@@ -1383,6 +1385,35 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 
 	// Generate response.
 	response := generateGetBalanceInfoResponse(balanceinfo)
+	encodedSuccessResponse := encodeResponse(response)
+
+	// Write response.
+	writeSuccessResponseXML(w, encodedSuccessResponse)
+}
+
+func (api objectAPIHandlers) GetBucketDCAndPCHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := newContext(r, w, "GetBucketDCAndPC")
+	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
+
+	vars := mux.Vars(r)
+	bucket := vars["bucket"]
+
+	objectAPI := api.ObjectAPI()
+	if objectAPI == nil {
+		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
+		return
+	}
+
+	getBucketDCAndPC := objectAPI.GetBucketDCAndPC
+
+	dc, pc, err := getBucketDCAndPC(ctx, bucket)
+	if err != nil {
+		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
+		return
+	}
+
+	// Generate response.
+	response := generateDCPCResponse(dc, pc)
 	encodedSuccessResponse := encodeResponse(response)
 
 	// Write response.

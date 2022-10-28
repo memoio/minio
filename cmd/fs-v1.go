@@ -213,12 +213,16 @@ func (fs *FSObjects) LocalStorageInfo(ctx context.Context) (StorageInfo, []error
 	return fs.StorageInfo(ctx)
 }
 
-func (fs *FSObjects) QueryPrice(ctx context.Context) (int, error) {
-	return 0, NotImplemented{}
+func (fs *FSObjects) QueryPrice(ctx context.Context) (string, error) {
+	return "", NotImplemented{}
 }
 
-func (fs *FSObjects) GetBalanceInfo(ctx context.Context) (string, error) {
+func (fs *FSObjects) GetBalanceInfo(ctx context.Context, address string) (string, error) {
 	return "", NotImplemented{}
+}
+
+func (fs *FSObjects) GetBucketDCAndPC(ctx context.Context, bucket string) (uint32, uint32, error) {
+	return 0, 0, NotImplemented{}
 }
 
 // StorageInfo - returns underlying storage statistics.

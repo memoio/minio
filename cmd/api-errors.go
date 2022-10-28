@@ -387,6 +387,9 @@ const (
 	ErrAccountNotEligible
 	ErrAdminServiceAccountNotFound
 	ErrPostPolicyConditionInvalidFormat
+
+	ErrObjectAlreadyExists
+	ErrObjectValidationFailed
 )
 
 type errorCodeMap map[APIErrorCode]APIError
@@ -640,6 +643,16 @@ var errorCodes = errorCodeMap{
 		Code:           "MethodNotAllowed",
 		Description:    "The specified method is not allowed against this resource.",
 		HTTPStatusCode: http.StatusMethodNotAllowed,
+	},
+	ErrObjectAlreadyExists: {
+		Code:           "ErrObjectAlreadyExists",
+		Description:    "object already exist.",
+		HTTPStatusCode: http.StatusConflict,
+	},
+	ErrObjectValidationFailed: {
+		Code:           "ErrObjectValidationFailed",
+		Description:    "object validation failed.",
+		HTTPStatusCode: http.StatusConflict,
 	},
 	ErrInvalidPart: {
 		Code:           "InvalidPart",
@@ -1990,7 +2003,9 @@ func toAPIErrorCode(ctx context.Context, err error) (apiErr APIErrorCode) {
 	case VersionNotFound:
 		apiErr = ErrNoSuchVersion
 	case ObjectAlreadyExists:
-		apiErr = ErrMethodNotAllowed
+		apiErr = ErrObjectAlreadyExists
+	case ObjectValidationFailed:
+		apiErr = ErrObjectValidationFailed
 	case ObjectNameInvalid:
 		apiErr = ErrInvalidObjectName
 	case ObjectNamePrefixAsSlash:

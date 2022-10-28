@@ -816,10 +816,14 @@ func (l *s3Objects) IsTaggingSupported() bool {
 	return true
 }
 
-func (l *s3Objects) QueryPrice(ctx context.Context) (int, error) {
-	return -1, minio.NotImplemented{}
+func (l *s3Objects) QueryPrice(ctx context.Context) (string, error) {
+	return "", minio.NotImplemented{}
 }
 
-func (l *s3Objects) GetBalanceInfo(ctx context.Context) (string, error) {
+func (l *s3Objects) GetBalanceInfo(ctx context.Context, addr string) (string, error) {
 	return "", minio.NotImplemented{}
+}
+
+func (l *s3Objects) GetBucketDCAndPC(ctx context.Context, bucket string) (uint32, uint32, error) {
+	return 0, 0, minio.NotImplemented{}
 }

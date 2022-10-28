@@ -1068,12 +1068,16 @@ func (z *erasureServerPools) CopyObject(ctx context.Context, srcBucket, srcObjec
 	return z.serverPools[poolIdx].PutObject(ctx, dstBucket, dstObject, srcInfo.PutObjReader, putOpts)
 }
 
-func (z *erasureServerPools) QueryPrice(ctx context.Context) (int, error) {
-	return 0, NotImplemented{}
+func (z *erasureServerPools) QueryPrice(ctx context.Context) (string, error) {
+	return "", NotImplemented{}
 }
 
-func (z *erasureServerPools) GetBalanceInfo(ctx context.Context) (string, error) {
+func (z *erasureServerPools) GetBalanceInfo(ctx context.Context, address string) (string, error) {
 	return "", NotImplemented{}
+}
+
+func (z *erasureServerPools) GetBucketDCAndPC(ctx context.Context, bucket string) (uint32, uint32, error) {
+	return 0, 0, NotImplemented{}
 }
 
 func (z *erasureServerPools) ListObjectsV2(ctx context.Context, bucket, prefix, continuationToken, delimiter string, maxKeys int, fetchOwner bool, startAfter string) (ListObjectsV2Info, error) {

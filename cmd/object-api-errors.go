@@ -313,6 +313,13 @@ func (e ObjectAlreadyExists) Error() string {
 	return "Object: " + e.Bucket + "/" + e.Object + " already exists"
 }
 
+// ObjectMd5 md5 not right
+type ObjectValidationFailed GenericError
+
+func (e ObjectValidationFailed) Error() string {
+	return "Object: " + e.Bucket + "/" + e.Object + " validation failed"
+}
+
 // ObjectExistsAsDirectory object already exists as a directory.
 type ObjectExistsAsDirectory GenericError
 

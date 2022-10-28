@@ -226,7 +226,7 @@ type QueryPirceResponse struct {
 
 	Owner Owner
 
-	Price int
+	Price string
 }
 
 type BalanceInfoResponse struct {
@@ -235,6 +235,16 @@ type BalanceInfoResponse struct {
 	Owner Owner
 
 	Balance string
+}
+
+type DCPCResponse struct {
+	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
+
+	Owner Owner
+
+	DC uint32
+
+	PC uint32
 }
 
 // Upload container for in progress multipart upload
@@ -451,7 +461,7 @@ func generateListBucketsResponse(buckets []BucketInfo) ListBucketsResponse {
 	return data
 }
 
-func generateQueryPriceResponse(price int) QueryPirceResponse {
+func generateQueryPriceResponse(price string) QueryPirceResponse {
 	data := QueryPirceResponse{}
 	owner := Owner{
 		ID:          globalMinioDefaultOwnerID,
@@ -473,6 +483,20 @@ func generateGetBalanceInfoResponse(balance string) BalanceInfoResponse {
 
 	data.Owner = owner
 	data.Balance = balance
+
+	return data
+}
+
+func generateDCPCResponse(dc, pc uint32) DCPCResponse {
+	data := DCPCResponse{}
+	owner := Owner{
+		ID:          globalMinioDefaultOwnerID,
+		DisplayName: "minio",
+	}
+
+	data.Owner = owner
+	data.DC = dc
+	data.PC = pc
 
 	return data
 }
