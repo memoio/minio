@@ -23,7 +23,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/minio/madmin-go"
 	"github.com/minio/minio-go/v7/pkg/encrypt"
 	"github.com/minio/minio-go/v7/pkg/tags"
@@ -77,8 +76,6 @@ type ObjectOptions struct {
 	// Mutate set to 'true' if the call is namespace mutation call
 	Mutate        bool
 	WalkAscending bool // return Walk results in ascending order of versions
-
-	Transaction types.Transaction
 }
 
 // ExpirationOptions represents object options for object expiration at objectLayer.
@@ -173,9 +170,11 @@ type ObjectLayer interface {
 	NewNSLock(bucket string, objects ...string) RWLocker
 
 	// Query
-	QueryPrice(ctx context.Context) (string, error)
+	QueryPrice(ctx context.Context, bucket, size, time string) (string, error)
 	GetBalanceInfo(ctx context.Context, addr string) (string, error)
-	GetBucketDCAndPC(ctx context.Context, bucket string) (uint32, uint32, error)
+	GetTokenAddress(ctx context.Context) (string, error)
+	GetGatewayAddress(ctx context.Context) (string, error)
+	Approve(ctx context.Context, ts, faddr string) error
 
 	// Storage operations.
 	Shutdown(context.Context) error

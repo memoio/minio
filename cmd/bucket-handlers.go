@@ -37,6 +37,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/gorilla/mux"
+	"golang.org/x/xerrors"
 
 	sse "github.com/memoio/minio/internal/bucket/encryption"
 	objectlock "github.com/memoio/minio/internal/bucket/object/lock"
@@ -1348,7 +1349,16 @@ func (api objectAPIHandlers) QueryPriceHandler(w http.ResponseWriter, r *http.Re
 
 	queryPrice := objectAPI.QueryPrice
 
-	price, err := queryPrice(ctx)
+	bucket := r.Form["bucket"]
+	size := r.Form["ssize"]
+	time := r.Form["stime"]
+
+	if len(size) == 0 || len(time) == 0 || len(bucket) == 0 {
+		writeErrorResponse(ctx, w, toAPIError(ctx, xerrors.New("time or size is nil")), r.URL)
+		return
+	}
+
+	price, err := queryPrice(ctx, bucket[0], size[0], time[0])
 	if err != nil {
 		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
 		return
@@ -1360,6 +1370,33 @@ func (api objectAPIHandlers) QueryPriceHandler(w http.ResponseWriter, r *http.Re
 
 	// Write response.
 	writeSuccessResponseXML(w, encodedSuccessResponse)
+}
+
+func (api objectAPIHandlers) ApproveHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := newContext(r, w, "Approve")
+	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
+
+	objectAPI := api.ObjectAPI()
+	if objectAPI == nil {
+		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
+		return
+	}
+
+	ts := r.Form["ts"]
+	faddr := r.Form["faddr"]
+
+	if len(ts) == 0 || len(faddr) == 0 {
+		writeErrorResponse(ctx, w, toAPIError(ctx, xerrors.New("transaction is nil")), r.URL)
+		return
+	}
+
+	approve := objectAPI.Approve
+
+	err := approve(ctx, ts[0], faddr[0])
+	if err != nil {
+		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
+		return
+	}
 }
 
 func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *http.Request) {
@@ -1391,12 +1428,9 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 	writeSuccessResponseXML(w, encodedSuccessResponse)
 }
 
-func (api objectAPIHandlers) GetBucketDCAndPCHandler(w http.ResponseWriter, r *http.Request) {
-	ctx := newContext(r, w, "GetBucketDCAndPC")
+func (api objectAPIHandlers) GetTokenAddressHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := newContext(r, w, "GetTokenAddress")
 	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
-
-	vars := mux.Vars(r)
-	bucket := vars["bucket"]
 
 	objectAPI := api.ObjectAPI()
 	if objectAPI == nil {
@@ -1404,16 +1438,38 @@ func (api objectAPIHandlers) GetBucketDCAndPCHandler(w http.ResponseWriter, r *h
 		return
 	}
 
-	getBucketDCAndPC := objectAPI.GetBucketDCAndPC
-
-	dc, pc, err := getBucketDCAndPC(ctx, bucket)
+	getTokenAddress := objectAPI.GetTokenAddress
+	tokenAddress, err := getTokenAddress(ctx)
 	if err != nil {
 		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
 		return
 	}
 
-	// Generate response.
-	response := generateDCPCResponse(dc, pc)
+	response := generateGetTokenAddressResponse(tokenAddress)
+	encodedSuccessResponse := encodeResponse(response)
+
+	// Write response.
+	writeSuccessResponseXML(w, encodedSuccessResponse)
+}
+
+func (api objectAPIHandlers) GetGatewayAddressHandler(w http.ResponseWriter, r *http.Request) {
+	ctx := newContext(r, w, "GetGatewayAddress")
+	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
+
+	objectAPI := api.ObjectAPI()
+	if objectAPI == nil {
+		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
+		return
+	}
+
+	getGatewayAddress := objectAPI.GetGatewayAddress
+	gatewayAddress, err := getGatewayAddress(ctx)
+	if err != nil {
+		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
+		return
+	}
+
+	response := generateGetTokenAddressResponse(gatewayAddress)
 	encodedSuccessResponse := encodeResponse(response)
 
 	// Write response.

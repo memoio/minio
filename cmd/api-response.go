@@ -237,14 +237,18 @@ type BalanceInfoResponse struct {
 	Balance string
 }
 
-type DCPCResponse struct {
+type TokenAddressResponse struct {
 	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
 
 	Owner Owner
 
-	DC uint32
+	Addr string
+}
 
-	PC uint32
+type ApproveResponse struct {
+	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
+
+	Owner Owner
 }
 
 // Upload container for in progress multipart upload
@@ -487,16 +491,27 @@ func generateGetBalanceInfoResponse(balance string) BalanceInfoResponse {
 	return data
 }
 
-func generateDCPCResponse(dc, pc uint32) DCPCResponse {
-	data := DCPCResponse{}
+func generateGetTokenAddressResponse(addr string) TokenAddressResponse {
+	data := TokenAddressResponse{}
 	owner := Owner{
 		ID:          globalMinioDefaultOwnerID,
 		DisplayName: "minio",
 	}
 
 	data.Owner = owner
-	data.DC = dc
-	data.PC = pc
+	data.Addr = addr
+
+	return data
+}
+
+func generateApproveResponse() ApproveResponse {
+	data := ApproveResponse{}
+	owner := Owner{
+		ID:          globalMinioDefaultOwnerID,
+		DisplayName: "minio",
+	}
+
+	data.Owner = owner
 
 	return data
 }

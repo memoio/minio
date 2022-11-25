@@ -340,9 +340,6 @@ func registerAPIRouter(router *mux.Router) {
 		// GetBalance
 		router.Methods(http.MethodGet).HandlerFunc(
 			collectAPIStats("getbalanceinfo", maxClients(gz(httpTraceAll(api.GetBalanceInfoHandler))))).Queries("getbalance", "")
-		router.Methods(http.MethodGet).HandlerFunc(
-			collectAPIStats("getbalanceinfo", maxClients(gz(httpTraceAll(api.GetBucketDCAndPCHandler))))).Queries("getbucketdcandpc", "")
-
 		// GetBucketNotification
 		router.Methods(http.MethodGet).HandlerFunc(
 			collectAPIStats("getbucketnotification", maxClients(gz(httpTraceAll(api.GetBucketNotificationHandler))))).Queries("notification", "")
@@ -485,6 +482,16 @@ func registerAPIRouter(router *mux.Router) {
 	// Query
 	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
 		collectAPIStats("queryprice", maxClients(gz(httpTraceAll(api.QueryPriceHandler))))).Queries("queryprice", "")
+
+	// GetTokenAddress
+	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
+		collectAPIStats("gettokenaddress", maxClients(gz(httpTraceAll(api.GetTokenAddressHandler))))).Queries("gettokenaddress", "")
+	// GetGatewayAddress
+	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
+		collectAPIStats("gettokenaddress", maxClients(gz(httpTraceAll(api.GetGatewayAddressHandler))))).Queries("getgatewayaddress", "")
+	// Approve
+	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
+		collectAPIStats("approve", maxClients(gz(httpTraceAll(api.ApproveHandler))))).Queries("approve", "")
 
 	// ListBuckets
 	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(

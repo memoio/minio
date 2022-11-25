@@ -816,7 +816,7 @@ func (l *s3Objects) IsTaggingSupported() bool {
 	return true
 }
 
-func (l *s3Objects) QueryPrice(ctx context.Context) (string, error) {
+func (l *s3Objects) QueryPrice(ctx context.Context, bucket, size, time string) (string, error) {
 	return "", minio.NotImplemented{}
 }
 
@@ -824,6 +824,14 @@ func (l *s3Objects) GetBalanceInfo(ctx context.Context, addr string) (string, er
 	return "", minio.NotImplemented{}
 }
 
-func (l *s3Objects) GetBucketDCAndPC(ctx context.Context, bucket string) (uint32, uint32, error) {
-	return 0, 0, minio.NotImplemented{}
+func (l *s3Objects) GetTokenAddress(ctx context.Context) (string, error) {
+	return "", minio.NotImplemented{}
+}
+
+func (l *s3Objects) GetGatewayAddress(ctx context.Context) (string, error) {
+	return "", minio.NotImplemented{}
+}
+
+func (l *s3Objects) Approve(ctx context.Context, ts, address string) error {
+	return minio.NotImplemented{}
 }
