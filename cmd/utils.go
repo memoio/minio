@@ -1126,7 +1126,6 @@ func MockOpenIDTestUserInteraction(ctx context.Context, pro OpenIDClientAppParam
 	if err != nil {
 		return "", fmt.Errorf("url parse err: %v", err)
 	}
-
 	// Start the user auth flow. This page would present the login with
 	// email or LDAP option.
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u.String(), nil)

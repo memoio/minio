@@ -249,6 +249,11 @@ func setPutObjHeaders(w http.ResponseWriter, objInfo ObjectInfo, delete bool) {
 		w.Header()[xhttp.ETag] = []string{`"` + objInfo.ETag + `"`}
 	}
 
+	if objInfo.UserDefined != nil {
+		w.Header()[xhttp.MemoExpiresDay] = []string{`"` + objInfo.UserDefined["x-amz-meta-date"] + `"`}
+		w.Header()[xhttp.MemoPrice] = []string{`"` + objInfo.UserDefined["x-memo-price"] + `"`}
+	}
+
 	// Set the relevant version ID as part of the response header.
 	if objInfo.VersionID != "" {
 		w.Header()[xhttp.AmzVersionID] = []string{objInfo.VersionID}

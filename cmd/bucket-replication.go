@@ -786,7 +786,7 @@ func getReplicationAction(oi1 ObjectInfo, oi2 minio.ObjectInfo, opType replicati
 		"X-Amz-Object-Lock-Mode",
 		"X-Amz-Object-Lock-Retain-Until-Date",
 		"X-Amz-Object-Lock-Legal-Hold",
-		"X-Amz-Website-Redirect-Location",
+		// "X-Amz-Website-Redirect-Location",
 		"X-Amz-Meta-",
 	}
 

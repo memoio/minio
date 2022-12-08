@@ -127,16 +127,16 @@ func guessIsBrowserReq(r *http.Request) bool {
 
 func setBrowserRedirectHandler(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		read := r.Method == http.MethodGet || r.Method == http.MethodHead
+		// read := r.Method == http.MethodGet || r.Method == http.MethodHead
 		// Re-direction is handled specifically for browser requests.
-		if guessIsBrowserReq(r) && read {
-			// Fetch the redirect location if any.
-			if u := getRedirectLocation(r); u != nil {
-				// Employ a temporary re-direct.
-				http.Redirect(w, r, u.String(), http.StatusTemporaryRedirect)
-				return
-			}
-		}
+		// if guessIsBrowserReq(r) && read {
+		// 	// Fetch the redirect location if any.
+		// 	if u := getRedirectLocation(r); u != nil {
+		// 		// Employ a temporary re-direct.
+		// 		// http.Redirect(w, r, u.String(), http.StatusTemporaryRedirect)
+		// 		return
+		// 	}
+		// }
 		h.ServeHTTP(w, r)
 	})
 }

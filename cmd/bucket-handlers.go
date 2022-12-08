@@ -1403,9 +1403,13 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 	ctx := newContext(r, w, "GetBalance")
 	defer logger.AuditLog(ctx, w, r, mustGetClaimsFromToken(r))
 
-	vars := mux.Vars(r)
-	addr := vars["bucket"]
-	fmt.Println("addr", addr)
+	addr := r.Form["addr"]
+
+	if len(addr) == 0 {
+		writeErrorResponse(ctx, w, toAPIError(ctx, xerrors.New("addr is nil")), r.URL)
+		return
+	}
+
 	objectAPI := api.ObjectAPI()
 	if objectAPI == nil {
 		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrServerNotInitialized), r.URL)
@@ -1414,7 +1418,7 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 
 	getBalanceInfo := objectAPI.GetBalanceInfo
 
-	balanceinfo, err := getBalanceInfo(ctx, addr)
+	balanceinfo, err := getBalanceInfo(ctx, addr[0])
 	if err != nil {
 		writeErrorResponse(ctx, w, toAPIError(ctx, err), r.URL)
 		return

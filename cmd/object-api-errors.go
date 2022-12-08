@@ -651,6 +651,32 @@ func (e NotImplemented) Error() string {
 	return e.Message
 }
 
+type Memo struct {
+	Message string
+}
+
+func (e Memo) Error() string {
+	return e.Message
+}
+
+type BalanceNotEnough struct{}
+
+func (e BalanceNotEnough) Error() string {
+	return "balance not enough"
+}
+
+type PayNotComplete struct{}
+
+func (e PayNotComplete) Error() string {
+	return "pay not complete"
+}
+
+type SignNotRight struct{} 
+
+func (e SignNotRight) Error() string {
+	return "g not complete"
+}
+
 // UnsupportedMetadata - unsupported metadata
 type UnsupportedMetadata struct{}
 

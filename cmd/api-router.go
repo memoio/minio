@@ -337,9 +337,6 @@ func registerAPIRouter(router *mux.Router) {
 		// GetBucketVersioning
 		router.Methods(http.MethodGet).HandlerFunc(
 			collectAPIStats("getbucketversioning", maxClients(gz(httpTraceAll(api.GetBucketVersioningHandler))))).Queries("versioning", "")
-		// GetBalance
-		router.Methods(http.MethodGet).HandlerFunc(
-			collectAPIStats("getbalanceinfo", maxClients(gz(httpTraceAll(api.GetBalanceInfoHandler))))).Queries("getbalance", "")
 		// GetBucketNotification
 		router.Methods(http.MethodGet).HandlerFunc(
 			collectAPIStats("getbucketnotification", maxClients(gz(httpTraceAll(api.GetBucketNotificationHandler))))).Queries("notification", "")
@@ -482,6 +479,10 @@ func registerAPIRouter(router *mux.Router) {
 	// Query
 	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
 		collectAPIStats("queryprice", maxClients(gz(httpTraceAll(api.QueryPriceHandler))))).Queries("queryprice", "")
+
+	// GetBalance
+	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(
+		collectAPIStats("getbalanceinfo", maxClients(gz(httpTraceAll(api.GetBalanceInfoHandler))))).Queries("getbalance", "")
 
 	// GetTokenAddress
 	apiRouter.Methods(http.MethodGet).Path(SlashSeparator).HandlerFunc(

@@ -390,6 +390,10 @@ const (
 
 	ErrObjectAlreadyExists
 	ErrObjectValidationFailed
+	ErrMemo
+	ErrBalanceNotEnough
+	ErrPayNotComplete
+	ErrSignNotRight
 )
 
 type errorCodeMap map[APIErrorCode]APIError
@@ -652,6 +656,21 @@ var errorCodes = errorCodeMap{
 	ErrObjectValidationFailed: {
 		Code:           "ErrObjectValidationFailed",
 		Description:    "object validation failed.",
+		HTTPStatusCode: http.StatusConflict,
+	},
+	ErrBalanceNotEnough: {
+		Code:           "ErrBalanceNotEnough",
+		Description:    "balance not enough.",
+		HTTPStatusCode: http.StatusConflict,
+	},
+	ErrPayNotComplete: {
+		Code:           "ErrPayNotComplete",
+		Description:    "pay not complete.",
+		HTTPStatusCode: http.StatusConflict,
+	},
+	ErrSignNotRight: {
+		Code:           "ErrSignNotRight",
+		Description:    "signature not right.",
 		HTTPStatusCode: http.StatusConflict,
 	},
 	ErrInvalidPart: {
@@ -1858,6 +1877,11 @@ var errorCodes = errorCodeMap{
 		Description:    "Invalid according to Policy: Policy Condition failed",
 		HTTPStatusCode: http.StatusForbidden,
 	},
+	ErrMemo: {
+		Code:           "Memo error",
+		Description:    "Memo gateway error",
+		HTTPStatusCode: http.StatusBadGateway,
+	},
 	// Add your error structure here.
 }
 
@@ -2006,6 +2030,12 @@ func toAPIErrorCode(ctx context.Context, err error) (apiErr APIErrorCode) {
 		apiErr = ErrObjectAlreadyExists
 	case ObjectValidationFailed:
 		apiErr = ErrObjectValidationFailed
+	case BalanceNotEnough:
+		apiErr = ErrBalanceNotEnough
+	case PayNotComplete:
+		apiErr = ErrPayNotComplete
+	case SignNotRight:
+		apiErr = ErrSignNotRight
 	case ObjectNameInvalid:
 		apiErr = ErrInvalidObjectName
 	case ObjectNamePrefixAsSlash:
@@ -2036,6 +2066,8 @@ func toAPIErrorCode(ctx context.Context, err error) (apiErr APIErrorCode) {
 		apiErr = ErrEntityTooSmall
 	case NotImplemented:
 		apiErr = ErrNotImplemented
+	case Memo:
+		apiErr = ErrMemo
 	case PartTooBig:
 		apiErr = ErrEntityTooLarge
 	case UnsupportedMetadata:

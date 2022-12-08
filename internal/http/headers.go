@@ -181,6 +181,8 @@ const (
 	MinIOSourceObjectLegalHoldTimestamp = "X-Minio-Source-Replication-LegalHold-Timestamp"
 	// predicted date/time of transition
 	MinIOTransition = "X-Minio-Transition"
+	MemoExpiresDay  = "X-Memo-Expires-Day"
+	MemoPrice       = "X-Memo-Price"
 )
 
 // Common http query params S3 API
