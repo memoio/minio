@@ -394,6 +394,9 @@ const (
 	ErrBalanceNotEnough
 	ErrPayNotComplete
 	ErrSignNotRight
+	ErrLfsNotReady
+	ErrLfsPutObject
+	ErrGetPrice
 )
 
 type errorCodeMap map[APIErrorCode]APIError
@@ -661,17 +664,37 @@ var errorCodes = errorCodeMap{
 	ErrBalanceNotEnough: {
 		Code:           "ErrBalanceNotEnough",
 		Description:    "balance not enough.",
-		HTTPStatusCode: http.StatusConflict,
+		HTTPStatusCode: 512,
 	},
 	ErrPayNotComplete: {
 		Code:           "ErrPayNotComplete",
 		Description:    "pay not complete.",
-		HTTPStatusCode: http.StatusConflict,
+		HTTPStatusCode: 513,
 	},
 	ErrSignNotRight: {
 		Code:           "ErrSignNotRight",
 		Description:    "signature not right.",
-		HTTPStatusCode: http.StatusConflict,
+		HTTPStatusCode: 514,
+	},
+	ErrLfsNotReady: {
+		Code:           "ErrLfsNotReady",
+		Description:    "lfs not ready.",
+		HTTPStatusCode: 515,
+	},
+	ErrLfsPutObject: {
+		Code:           "ErrLfsPutObject",
+		Description:    "lfs put object error.",
+		HTTPStatusCode: 516,
+	},
+	ErrGetPrice: {
+		Code:           "ErrGetPrice",
+		Description:    "get price error.",
+		HTTPStatusCode: 517,
+	},
+	ErrMemo: {
+		Code:           "ErrMemo",
+		Description:    "Memo gateway error",
+		HTTPStatusCode: http.StatusBadGateway,
 	},
 	ErrInvalidPart: {
 		Code:           "InvalidPart",
@@ -1877,11 +1900,7 @@ var errorCodes = errorCodeMap{
 		Description:    "Invalid according to Policy: Policy Condition failed",
 		HTTPStatusCode: http.StatusForbidden,
 	},
-	ErrMemo: {
-		Code:           "Memo error",
-		Description:    "Memo gateway error",
-		HTTPStatusCode: http.StatusBadGateway,
-	},
+
 	// Add your error structure here.
 }
 
@@ -2036,6 +2055,12 @@ func toAPIErrorCode(ctx context.Context, err error) (apiErr APIErrorCode) {
 		apiErr = ErrPayNotComplete
 	case SignNotRight:
 		apiErr = ErrSignNotRight
+	case LfsPutObject:
+		apiErr = ErrLfsPutObject
+	case LfsNotReady:
+		apiErr = ErrLfsNotReady
+	case GetPrice:
+		apiErr = ErrGetPrice
 	case ObjectNameInvalid:
 		apiErr = ErrInvalidObjectName
 	case ObjectNamePrefixAsSlash:
@@ -2188,8 +2213,19 @@ func toAPIError(ctx context.Context, err error) APIError {
 		apiErr = errorCodes.ToAPIErrWithErr(code, e)
 	}
 
-	if apiErr.Code == "NotImplemented" {
+	if apiErr.Code == "NotImplemented" || apiErr.Code == "ErrMemo" {
 		switch e := err.(type) {
+		case Memo:
+			desc := e.Error()
+			if desc == "" {
+				desc = apiErr.Description
+			}
+			apiErr = APIError{
+				Code:           apiErr.Code,
+				Description:    desc,
+				HTTPStatusCode: apiErr.HTTPStatusCode,
+			}
+			return apiErr
 		case NotImplemented:
 			desc := e.Error()
 			if desc == "" {

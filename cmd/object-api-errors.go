@@ -671,10 +671,28 @@ func (e PayNotComplete) Error() string {
 	return "pay not complete"
 }
 
-type SignNotRight struct{} 
+type SignNotRight struct{}
 
 func (e SignNotRight) Error() string {
-	return "g not complete"
+	return "sign not complete"
+}
+
+type LfsPutObject struct{}
+
+func (e LfsPutObject) Error() string {
+	return "lfs putobject error"
+}
+
+type LfsNotReady struct{}
+
+func (e LfsNotReady) Error() string {
+	return "lfs not ready"
+}
+
+type GetPrice struct{}
+
+func (e GetPrice) Error() string {
+	return "get price error"
 }
 
 // UnsupportedMetadata - unsupported metadata

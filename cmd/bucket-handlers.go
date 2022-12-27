@@ -1366,10 +1366,10 @@ func (api objectAPIHandlers) QueryPriceHandler(w http.ResponseWriter, r *http.Re
 
 	// Generate response.
 	response := generateQueryPriceResponse(price)
-	encodedSuccessResponse := encodeResponse(response)
+	encodedSuccessResponse := encodeResponseJSON(response)
 
 	// Write response.
-	writeSuccessResponseXML(w, encodedSuccessResponse)
+	writeSuccessResponseJSON(w, encodedSuccessResponse)
 }
 
 func (api objectAPIHandlers) ApproveHandler(w http.ResponseWriter, r *http.Request) {
@@ -1426,10 +1426,10 @@ func (api objectAPIHandlers) GetBalanceInfoHandler(w http.ResponseWriter, r *htt
 
 	// Generate response.
 	response := generateGetBalanceInfoResponse(balanceinfo)
-	encodedSuccessResponse := encodeResponse(response)
+	encodedSuccessResponse := encodeResponseJSON(response)
 
 	// Write response.
-	writeSuccessResponseXML(w, encodedSuccessResponse)
+	writeSuccessResponseJSON(w, encodedSuccessResponse)
 }
 
 func (api objectAPIHandlers) GetTokenAddressHandler(w http.ResponseWriter, r *http.Request) {

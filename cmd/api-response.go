@@ -224,15 +224,11 @@ type ListBucketsResponse struct {
 type QueryPirceResponse struct {
 	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
 
-	Owner Owner
-
 	Price string
 }
 
 type BalanceInfoResponse struct {
 	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
-
-	Owner Owner
 
 	Balance string
 }
@@ -240,15 +236,11 @@ type BalanceInfoResponse struct {
 type TokenAddressResponse struct {
 	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
 
-	Owner Owner
-
 	Addr string
 }
 
 type ApproveResponse struct {
 	XMLName xml.Name `xml:"http://s3.amazonaws.com/doc/2006-03-01/ ListAllMyBucketsResult" json:"-"`
-
-	Owner Owner
 }
 
 // Upload container for in progress multipart upload
@@ -449,7 +441,7 @@ func generateListBucketsResponse(buckets []BucketInfo) ListBucketsResponse {
 	data := ListBucketsResponse{}
 	owner := Owner{
 		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
+		DisplayName: "memo",
 	}
 
 	for _, bucket := range buckets {
@@ -467,12 +459,6 @@ func generateListBucketsResponse(buckets []BucketInfo) ListBucketsResponse {
 
 func generateQueryPriceResponse(price string) QueryPirceResponse {
 	data := QueryPirceResponse{}
-	owner := Owner{
-		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
-	}
-
-	data.Owner = owner
 	data.Price = price
 
 	return data
@@ -480,12 +466,6 @@ func generateQueryPriceResponse(price string) QueryPirceResponse {
 
 func generateGetBalanceInfoResponse(balance string) BalanceInfoResponse {
 	data := BalanceInfoResponse{}
-	owner := Owner{
-		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
-	}
-
-	data.Owner = owner
 	data.Balance = balance
 
 	return data
@@ -493,12 +473,7 @@ func generateGetBalanceInfoResponse(balance string) BalanceInfoResponse {
 
 func generateGetTokenAddressResponse(addr string) TokenAddressResponse {
 	data := TokenAddressResponse{}
-	owner := Owner{
-		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
-	}
 
-	data.Owner = owner
 	data.Addr = addr
 
 	return data
@@ -506,12 +481,6 @@ func generateGetTokenAddressResponse(addr string) TokenAddressResponse {
 
 func generateApproveResponse() ApproveResponse {
 	data := ApproveResponse{}
-	owner := Owner{
-		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
-	}
-
-	data.Owner = owner
 
 	return data
 }
@@ -521,7 +490,7 @@ func generateListVersionsResponse(bucket, prefix, marker, versionIDMarker, delim
 	versions := make([]ObjectVersion, 0, len(resp.Objects))
 	owner := Owner{
 		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
+		DisplayName: "memo",
 	}
 	data := ListVersionsResponse{}
 
@@ -579,7 +548,7 @@ func generateListObjectsV1Response(bucket, prefix, marker, delimiter, encodingTy
 	contents := make([]Object, 0, len(resp.Objects))
 	owner := Owner{
 		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
+		DisplayName: "memo",
 	}
 	data := ListObjectsResponse{}
 
@@ -628,7 +597,7 @@ func generateListObjectsV2Response(bucket, prefix, token, nextToken, startAfter,
 	contents := make([]Object, 0, len(objects))
 	owner := Owner{
 		ID:          globalMinioDefaultOwnerID,
-		DisplayName: "minio",
+		DisplayName: "memo",
 	}
 	data := ListObjectsV2Response{}
 
